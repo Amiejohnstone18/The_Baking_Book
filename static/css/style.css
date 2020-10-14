@@ -1,22 +1,49 @@
 /* Nav Bar */
 .nav-colour {
-    background-color: #c6d2ed;
+  background-color: #c6d2ed;
+  font-family: "Libre Franklin", sans-serif;
 }
 
+.img-responsive {
+  height: auto;
+  width: auto;
+  max-height: 67px;
+  max-width: 250px;
+}
 
 /* Footer */
 .page-footer {
-    background-color: #c6d2ed;
-    text-align: center;
+  background-color: #c6d2ed;
+  text-align: center;
+  font-family: "Libre Franklin", sans-serif;
+  /* font-weight: bold; */
+  font-size: 12px;
 }
 
 body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-  }
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
 
-  main {
-    flex: 1 0 auto;
-  }
-      
+main {
+  flex: 1 0 auto;
+}
+
+.social-icons {
+  float: left;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.fa-facebook {
+  color: white;
+}
+
+.fa-instagram-square {
+  color: white;
+}
+
+.fa-pinterest {
+  color: white;
+}
