@@ -11,6 +11,15 @@
   max-width: 250px;
 }
 
+/* Hero Image */
+.hero-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  width: 50%;
+}
+
 /* Footer */
 .page-footer {
   background-color: #c6d2ed;

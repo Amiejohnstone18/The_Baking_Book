@@ -1,0 +1,36 @@
+{% extends "base.html" %} {% block content %}
+
+<div>
+  <img
+    class="hero-image"
+    src="static/images/cupcakes-hero.jpg"
+    alt="hero-image"
+  />
+  <h2>Explore and share a variety of home made dessert recipes</h2>
+</div>
+
+<h2>Recipe Cards</h2>
+{% for recipes in recipes %} {{ recipes.name }}<br />
+{{ recipes.image_url }}<br />
+{{ recipes.author }}<br />
+{{ recipes.author_id }}<br />
+{{ recipes.current_rating }}<br />
+{{ recipes.description }}<br />
+{{ recipes.image_url_id }}<br />
+{{ recipes.preptime_hrs }}<br />
+{{ recipes.preptime_mins }}<br />
+{{ recipes.baking_time_hrs }}<br />
+{{ recipes.baking_time_mins }} <br />
+{{ recipes.serves }}<br />
+{{ recipes.total_rating }}<br />
+{% endfor %}
+
+<ul class="collapsible">
+  <li>
+    <div class="collapsible-header">
+      <i class="material-icons">filter_drama</i>First
+    </div>
+    <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+  </li>
+</ul>
+{% endblock %}
