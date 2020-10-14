@@ -22,7 +22,7 @@
       <div class="card">
         {% for index in index %}
         <div class="card-image waves-effect waves-block waves-light">
-          <img class="activator" src="{{ index.image_url }}" />
+          <img class="activator" src="{{ index.image_url }}"/>
         </div>
         <div class="card-content">
           <span class="card-title activator grey-text text-darken-4">
@@ -48,11 +48,14 @@
   </div>
 </div>
 
-{% for index in index %} {{ index.image_url }}<br />
+{% for index in index %} 
+{{ index.image_url }}<br />
 {{ index.name }}<br />
 {{ index.total_rating }}<br />
 {{ index.preptime }}<br />
 {{ index.bakingtime }}<br />
 {{ index.serves }}<br />
 {{ index.description }}<br />
-{% endfor %} {% endblock %}
+{% endfor %} 
+
+{% endblock %}
