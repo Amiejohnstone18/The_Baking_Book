@@ -18,22 +18,31 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
-@app.route("/get_recipes")
-def get_recipes():
-    recipes = mongo.db.recipes.find()
-    return render_template("recipes.html", recipes=recipes)
-
-
-@app.route("/")
 @app.route("/index")
 def index():
     index = mongo.db.index.find()
     return render_template("index.html", index=index)
 
 
-@app.route("/add_recipes")
+@app.route("/add_recipes", methods=["GET", "POST"])
 def add_recipes():
+    if request.method == "POST":
+        recipe = {
+                "author": request.form.get("author"),
+                "recipe_name": request.form.get("recipe_name"),
+                "description": request.form.get("description"),
+                "preptime": request.form.get("preptime"),
+                "bakingtime": request.form.get("bakingtime"),
+                "serves": request.form.get("serves"),
+                "ingredients": request.form.get("ingredients"),
+                "method": request.form.get("method")
+            }
+
+        mongo.db.add_recipes.insert_one(recipe)
+        flash("Recipe Uploaded")
+        return redirect(url_for("add_recipes"))
     return render_template("add_recipes.html")
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),

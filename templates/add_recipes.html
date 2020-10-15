@@ -1,59 +1,112 @@
 {% extends "base.html" %} {% block content %}
 
+<!-- Upload Recipes -->
 <h3>Upload Recipes</h3>
-<div class="row">
-  <form class="col s12" method="POST" action="">
+<div class="row-card-panel grey lighten-5 container">
+  <form class="col s12" method="POST" action="{{ url_for('add_recipes') }}">
     <div class="row">
+      
+      <!-- Author Name -->
       <div class="input-field col s12">
-        <input id="author" type="text" class="validate" />
-        <label for="author">Author</label>
+        <input
+          id="author"
+          name="author"
+          type="text"
+          class="validate"
+          required
+        />
+        <label class="fas fa-user" for="author">Author</label>
       </div>
+      <!-- Recipe Name -->
       <div class="input-field col s12">
-        <input id="recipe_name" type="text" class="validate" />
-        <label for="recipe_name">Recipe Name</label>
+        <input
+          id="recipe_name"
+          name="recipe_name"
+          type="text"
+          class="validate"
+          required
+        />
+        <label class="fas fa-cookie-bite" for="recipe_name">Recipe Name</label>
       </div>
     </div>
-    <img class="materialboxed" width="650" src="images/sample-1.jpg" />
+    <!-- Upload Image -->
+   
+    <!-- Description -->
     <div class="row">
       <div class="input-field col s12">
-        <input id="description" type="text" class="validate" />
-        <label for="description">Description</label>
+        <input
+          id="description"
+          name="description"
+          minlength="10"
+          maxlength="100"
+          type="text"
+          class="validate"
+          required
+        />
+        <label class="fas fa-plus-circle" for="description">Description</label>
       </div>
     </div>
+    <!-- Preptime -->
     <div class="row">
       <div class="input-field col s12">
-        <input id="prep-time" type="text" class="validate" />
-        <label for="prep-time">Prep Time</label>
+        <input id="preptime" name="preptime" type="text" required />
+        <label class="fas fa-clock" for="prep-time">Prep Time</label>
       </div>
     </div>
+    <!-- Baking Time -->
     <div class="row">
       <div class="input-field col s12">
-        <input id="baking_time" type="text" class="validate" />
-        <label for="baking_time">Baking Time</label>
+        <input id="bakingtime" name="bakingtime" type="text" required />
+        <label class="fas fa-hourglass-end" for="bakingtime">Baking Time</label>
       </div>
     </div>
+    <!-- Serves -->
     <div class="row">
       <div class="input-field col s12">
-        <input id="serves" type="text" class="validate" />
-        <label for="serves">Serves</label>
+        <input
+          id="serves"
+          name="serves"
+          type="text"
+          class="validate"
+          required
+        />
+        <label class="fas fa-utensils" for="serves">Serves</label>
       </div>
     </div>
+    <!-- Ingredients -->
     <div class="row">
       <div class="input-field col s12">
-        <input id="ingredients" type="text" class="validate" />
-        <label for="ingredients">Ingredients</label>
+        <input
+          id="ingredients"
+          name="ingredients"
+          type="text"
+          class="validate"
+          required
+        />
+        <label class="fas fa-mortar-pestle" for="ingredients"
+          >Ingredients</label
+        >
       </div>
     </div>
+    <!-- Method -->
     <div class="row">
       <div class="input-field col s12">
-        <input id="method" type="text" class="validate" />
-        <label for="method">Method</label>
+        <input
+          id="method"
+          name="method"
+          type="text"
+          class="validate"
+          required
+        />
+        <label class="fas fa-arrow-circle-down" for="method">Method</label>
       </div>
     </div>
-    <button class="btn waves-effect waves-light" type="submit" name="action">
+    <!-- Submit Button -->
+    <button class="btn waves-effect waves-light" type="submit">
       Upload Recipe
       <i class="material-icons left"></i>
     </button>
+   
   </form>
 </div>
 

@@ -14,7 +14,6 @@
 <br />
 <br />
 
-
 <!-- Recipe Cards -->
 
 <div class="container">
@@ -22,25 +21,31 @@
     <div class="col s3">
       <div class="card">
         {% for index in index %}
+        <!-- Image -->
         <div class="card-image waves-effect waves-block waves-light">
-          <img class="activator" src="{{ index.image_url }}"/>
+          <img class="activator" src="{{ index.image_url }}" />
         </div>
+        <!-- Recipe Name-->
         <div class="card-content">
           <span class="card-title activator grey-text text-darken-4">
             {{ index.name }} <br />
             <i class="fas fa-ellipsis-h"></i
           ></span>
         </div>
+        <!-- Recipe Name -->
         <div class="card-reveal">
           <span class="card-title grey-text text-darken-4"
             >{{ index.name }} <i class="fas fa-times"></i
           ></span>
+          <!-- Preptime/ Bakingtime/ Serves -->
           <ul>
             <i class="far fa-clock"> {{ index.preptime }}</i>
             <i class="fas fa-hourglass-end"> {{ index.bakingtime }}</i>
             <i class="fas fa-utensils"> {{ index.serves }}</i>
           </ul>
+          <!-- Description -->
           <p>{{ index.description }}</p>
+          <!-- View More -->
           <p><a href="#">View More</a></p>
         </div>
         {% endfor %}
