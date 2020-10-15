@@ -53,11 +53,38 @@
   font-family: "Libre Franklin", sans-serif;
 }
 
-
 /* Recipe Cards */
 
 /*.card { */
-    
+
+/* Add Recipes */
+#add_recipe_title {
+  font-family: "Libre Franklin", sans-serif;
+  text-align: center;
+}
+
+.row-card-panel {
+  margin-bottom: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.button {
+  font-family: "Libre Franklin", sans-serif;
+  background-color: #c6d2ed;
+  color: white;
+  border: #c6d2ed solid 1px;
+  font-size: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.button:hover {
+  font-weight: bold;
+  font-size: 22px;
+}
 
 /* Footer */
 .page-footer {
