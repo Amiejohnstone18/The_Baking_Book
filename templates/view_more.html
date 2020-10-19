@@ -1,0 +1,20 @@
+{% extends "base.html" %} {% block content %}
+
+
+{% for view_more in view_more %}
+
+{{ view_more.recipe_name }}
+{{ view_more.author }}
+{{ view_more.image_url }}
+{{ view_more.description }}
+{{ view_more.preptime }}
+{{ view_more.bakingtime }}
+{{ view_more.serves }}
+{{ view_more.ingredients }}
+{{ view_more.method }}
+
+
+{% endfor %}
+
+
+{% endblock %}
