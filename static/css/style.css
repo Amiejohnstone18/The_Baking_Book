@@ -55,7 +55,6 @@
 
 /* Recipe Cards */
 
-
 /* Add Recipes */
 #add_recipe_title {
   font-family: "Libre Franklin", sans-serif;
@@ -83,6 +82,49 @@
 .button:hover {
   font-weight: bold;
   font-size: 22px;
+}
+
+/* View More */
+
+#background {
+  background-color: #dcdcdc;
+  margin-top: 20px;
+}
+
+#recipe_img {
+  padding-left: 30px;
+}
+
+.recipe_name {
+  color: white;
+  font-family: "Libre Franklin", sans-serif;
+  margin-top: 30px;
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.symbols {
+  color: white;
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+
+/* Ingredients */
+#ingredients {
+  color: white;
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+
+/* Method */
+#method{
+  color: white;
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 20px;
+  text-align: center;
 }
 
 /* Footer */

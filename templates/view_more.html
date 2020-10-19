@@ -1,38 +1,47 @@
 {% extends "base.html" %} {% block content %}
 
-<div class="container" id="background">
-  <!-- Recipe Name -->
-  <h2>{{ add_recipes.recipe_name }}</h2>
-  <!-- Image -->
-  <div class="view_more_img">
-    <img src="{{ add_recipes.image_url }}" />
-  </div>
-  <!-- Preptime -->
+<body>
+  <div class="container" id="background">
+    <div class="row">
+    {% for add_recipes in add_recipes %}
+    <!-- Image -->
+      <div class="col s12 m6" id="recipe_img">
+          <img class="responsive-img z-depth-3" src="{{ add_recipes.image_url }}" />
+      </div>
+      <!-- Recipe Name -->
+      <div class="recipe_name">
+        {{ add_recipes.recipe_name }} 
+        </div>
+        <br/>
+        <br/>
+        <div class="symbols">
+        <!-- Preptime -->
+        <i class="far fa-clock">
+        {{ add_recipes.preptime }} 
+        </i>
+        <!-- Baking Time -->
+        <i class="fas fa-hourglass-end">
+        {{ add_recipes.bakingtime }} 
+        </i>
+        <!-- Serves -->
+        <i class="fas fa-utensils">
+        {{ add_recipes.serves }}
+        </i>
+        </div>
+         <!-- Share -->
+        </div>
+        <!-- Ingredients -->
+      <div class="col s12 m6" id="ingredients">
+      <h3> Ingredients </h3>
+        {{ add_recipes.ingredients }}
+      </div>
+      <!-- Method -->
+      <div class="col s12 m6" id="method">
+      <h3> Method </h3>
+        {{ add_recipes.method }}
+      </div>
+    </div>
+  {% endfor %} 
+</body>
 
-  <!-- Baking Time -->
-
-  <!-- Serves -->
-
-  <!-- Share -->
-
-  <!-- Ingredients -->
-
-  <!-- Method -->
-  
-</div>
-
-{% for add_recipes in add_recipes %} 
-
-{{ add_recipes.recipe_name }} 
-{{ add_recipes.author }} 
-{{ add_recipes.image_url }} 
-{{ add_recipes.description }}
-{{ add_recipes.preptime }} 
-{{ add_recipes.bakingtime }} 
-{{ add_recipes.serves }}
-{{ add_recipes.ingredients }} 
-{{ add_recipes.method }} 
-
-{% endfor %} 
-{% endblock
-%}
+ {% endblock %}
