@@ -107,12 +107,21 @@
 .symbols {
   color: white;
   font-family: "Libre Franklin", sans-serif;
-  font-size: 20px;
+  font-size: 30px;
   text-align: center;
 }
 
+.recipe_info{
+    font-family: "Libre Franklin", sans-serif;
+    font-size: 22px;
+    color: white;
+    text-align: center;
+    
+}
+
+
 /* Ingredients */
-#ingredients {
+#more-ingredients {
   color: white;
   font-family: "Libre Franklin", sans-serif;
   font-size: 20px;
@@ -120,12 +129,14 @@
 }
 
 /* Method */
-#method{
+#more-method {
   color: white;
   font-family: "Libre Franklin", sans-serif;
   font-size: 20px;
   text-align: center;
 }
+
+
 
 /* Footer */
 .page-footer {
