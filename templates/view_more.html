@@ -1,20 +1,38 @@
 {% extends "base.html" %} {% block content %}
 
+<div class="container" id="background">
+  <!-- Recipe Name -->
+  <h2>{{ add_recipes.recipe_name }}</h2>
+  <!-- Image -->
+  <div class="view_more_img">
+    <img src="{{ add_recipes.image_url }}" />
+  </div>
+  <!-- Preptime -->
 
-{% for view_more in view_more %}
+  <!-- Baking Time -->
 
-{{ view_more.recipe_name }}
-{{ view_more.author }}
-{{ view_more.image_url }}
-{{ view_more.description }}
-{{ view_more.preptime }}
-{{ view_more.bakingtime }}
-{{ view_more.serves }}
-{{ view_more.ingredients }}
-{{ view_more.method }}
+  <!-- Serves -->
 
+  <!-- Share -->
 
-{% endfor %}
+  <!-- Ingredients -->
 
+  <!-- Method -->
+  
+</div>
 
-{% endblock %}
+{% for add_recipes in add_recipes %} 
+
+{{ add_recipes.recipe_name }} 
+{{ add_recipes.author }} 
+{{ add_recipes.image_url }} 
+{{ add_recipes.description }}
+{{ add_recipes.preptime }} 
+{{ add_recipes.bakingtime }} 
+{{ add_recipes.serves }}
+{{ add_recipes.ingredients }} 
+{{ add_recipes.method }} 
+
+{% endfor %} 
+{% endblock
+%}

@@ -46,7 +46,7 @@
           <!-- Description -->
           <p>{{ add_recipes.description }}</p>
           <!-- View More -->
-          <p><a href="templates/view_more.html">View More</a></p>
+          <p><a href="{{ url_for('view_more') }}">View More</a></p>
         </div>
         {% endfor %}
       </div>

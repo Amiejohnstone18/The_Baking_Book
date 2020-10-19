@@ -46,8 +46,8 @@ def add_recipes():
 
 @app.route("/view_more")
 def view_more():
-    view_more = mongo.db.view_more.find()
-    return render_template("view_more.html", view_more=view_more)
+    add_recipes = mongo.db.add_recipes.find()
+    return render_template("view_more.html", add_recipes=add_recipes)
 
 
 if __name__ == "__main__":
