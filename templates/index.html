@@ -16,11 +16,11 @@
 
 <!-- Recipe Cards -->
 
+{% for add_recipes in add_recipes %}
 <div class="container">
   <div class="row">
     <div class="col s12 m3">
       <div class="card">
-        {% for add_recipes in add_recipes %}
         <!-- Image -->
         <div class="card-image waves-effect waves-block waves-light">
           <img class="activator" src="{{ add_recipes.image_url }}" />
@@ -48,10 +48,10 @@
           <!-- View More -->
           <p><a href="{{ url_for('view_more') }}">View More</a></p>
         </div>
-        {% endfor %}
       </div>
     </div>
   </div>
 </div>
+{% endfor %}
 
 {% endblock %}

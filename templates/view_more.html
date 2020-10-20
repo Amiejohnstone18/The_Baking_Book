@@ -1,9 +1,10 @@
 {% extends "base.html" %} {% block content %}
 
+ {% for add_recipes in add_recipes %}
 <body>
   <div class="container" id="background">
     <div class="row">
-    {% for add_recipes in add_recipes %}
+    
     <!-- Image -->
       <div class="col s12 m6" id="recipe_img">
           <img class="responsive-img z-depth-3" src="{{ add_recipes.image_url }}" />
@@ -47,7 +48,8 @@
       </div>
       </div>
     </div>
-  {% endfor %} 
+ 
 </body>
+ {% endfor %} 
 
  {% endblock %}
