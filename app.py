@@ -45,10 +45,10 @@ def add_recipes():
     return render_template("add_recipes.html")
 
 
-@app.route("/view_more")
-def view_more():
-    add_recipes = mongo.db.add_recipes.find()
-    return render_template("view_more.html", add_recipes=add_recipes)
+@app.route("/view_more/<recipe_id>")
+def view_more(recipe_id):
+    recipe = mongo.db.add_recipes.find({'_id': ObjectId(recipe_id)})
+    return render_template("view_more.html", recipe=recipe)
 
 
 if __name__ == "__main__":
