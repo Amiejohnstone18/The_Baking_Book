@@ -1,17 +1,17 @@
 {% extends "base.html" %} {% block content %}
 
- {% for add_recipes in add_recipes %}
+
 <body>
   <div class="container" id="background">
     <div class="row">
-    
+    {% for recipe in add_recipes %}
     <!-- Image -->
       <div class="col s12 m6" id="recipe_img">
-          <img class="responsive-img z-depth-3" src="{{ add_recipes.image_url }}" />
+          <img class="responsive-img z-depth-3" src="{{ recipe.image_url }}" />
       </div>
       <!-- Recipe Name -->
       <div class="recipe_name">
-        {{ add_recipes.recipe_name }} 
+        {{ recipe.recipe_name }} 
         </div>
         <br/>
         <br/>
@@ -19,17 +19,17 @@
         <!-- Preptime -->
         <p class="recipe_info">Prep Time&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Baking Time&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Serves</p>
         <i class="far fa-clock" id="preptime-vm">
-        {{ add_recipes.preptime }}
+        {{ recipe.preptime }}
         </i>
         &nbsp; &nbsp; &nbsp;
         <!-- Baking Time -->
         <i class="fas fa-hourglass-end" id="bakingtime-vm">
-        {{ add_recipes.bakingtime }} 
+        {{ recipe.bakingtime }} 
         </i>
         &nbsp; &nbsp; &nbsp;
         <!-- Serves -->
         <i class="fas fa-utensils" id="serves-vm">
-        {{ add_recipes.serves }}
+        {{ recipe.serves }}
         </i>
         &nbsp; &nbsp; &nbsp;
         </div>
@@ -39,17 +39,18 @@
         <div class="row">
       <div class="col s12 m6" id="more-ingredients">
       <h3> Ingredients </h3>
-        {{ add_recipes.ingredients }}
+        {{ recipe.ingredients }}
       </div>
       <!-- Method -->
       <div class="col s12 m6" id="more-method">
       <h3> Method </h3>
-        {{ add_recipes.method }}
+        {{ recipe.method }}
       </div>
+      {% endfor %} 
       </div>
     </div>
  
 </body>
- {% endfor %} 
+ 
 
  {% endblock %}

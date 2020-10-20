@@ -30,6 +30,7 @@ def add_recipes():
         recipe = {
             "author": request.form.get("author"),
             "recipe_name": request.form.get("recipe_name"),
+            "image_url": request.form.get("image_url"),
             "description": request.form.get("description"),
             "preptime": request.form.get("preptime"),
             "bakingtime": request.form.get("bakingtime"),
