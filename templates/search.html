@@ -20,6 +20,45 @@
         </form>
     </div>
 
+<!-- Recipe Cards -->
+
+<div class="container">
+  <div class="row">
+  {% for recipe in add_recipes %}
+    <div class="col s12 m3">
+      <div class="card">
+        <!-- Image -->
+        <div class="card-image waves-effect waves-block waves-light">
+          <img class="activator" src="{{ recipe.image_url }}" width="500" height="200"/>
+        </div>
+        <!-- Recipe Name-->
+        <div class="card-content">
+          <span class="card-title activator grey-text text-darken-4">
+            {{ recipe.recipe_name }} <br />
+            <i class="fas fa-ellipsis-h"></i
+          ></span>
+        </div>
+        <!-- Recipe Name -->
+        <div class="card-reveal">
+          <span class="card-title grey-text text-darken-4"
+            >{{ recipe.recipe_name }} <i class="fas fa-times"></i
+          ></span>
+          <!-- Preptime/ Bakingtime/ Serves -->
+          <ul>
+            <i class="far fa-clock"> {{ recipe.preptime }}</i>
+            <i class="fas fa-hourglass-end"> {{ recipe.bakingtime }}</i>
+            <i class="fas fa-utensils"> {{ recipe.serves }}</i>
+          </ul>
+          <!-- Description -->
+          <p>{{ recipe.description }}</p>
+          <!-- View More -->
+          <p><a href="{{ url_for('view_more', recipe_id=recipe._id) }}">View More</a></p>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
 
 
 
