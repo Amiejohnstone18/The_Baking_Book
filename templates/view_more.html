@@ -58,7 +58,7 @@
 		<div class="btns-vm">
 			<!-- Update & Delete Buttons -->
 			<a href="{{url_for('update_recipe', recipe_id=recipe._id)}}" class="waves-effect waves-light btn" id="update-btn">Update</a>
-			<a href="#" class="waves-effect waves-light btn" id="delete-btn">Delete</a>
+			<a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}" class="waves-effect waves-light btn" id="delete-btn">Delete</a>
 		</div>
 	</div>
 	{% endfor %}
