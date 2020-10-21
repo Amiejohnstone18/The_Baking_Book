@@ -45,6 +45,13 @@ def add_recipes():
     return render_template("add_recipes.html")
 
 
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    query = request.form.get("query")
+    add_recipes = mongo.db.add_recipes.find({"$text": {"$search": query}})
+    return render_template("search.html", add_recipes=add_recipes)
+
+
 @app.route("/view_more/<recipe_id>")
 def view_more(recipe_id):
     recipe = mongo.db.add_recipes.find({"_id": ObjectId(recipe_id)})
@@ -71,6 +78,7 @@ def update_recipe(recipe_id):
 
     recipe = mongo.db.add_recipes.find_one({"_id": ObjectId(recipe_id)})
     return render_template("update_recipe.html", recipe=recipe)
+
 
 @app.route("/delete_recipe/<recipe_id>")
 def delete_recipe(recipe_id):
