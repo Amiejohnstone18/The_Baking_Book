@@ -51,12 +51,11 @@ def view_more(recipe_id):
     return render_template("view_more.html", recipe=recipe)
 
 
-@app.route('/update_recipe/<recipe_id>')
+@app.route("/update_recipe/<recipe_id>", methods=["GET", "POST"])
 def update_recipe(recipe_id):
-    the_recipe = mongo.db.recipe.find_one({"_id": ObjectId(recipe_id)})
-    all_recipes = mongo.db.recipes.find()
-    return render_template('update_recipe.html', recipe=the_recipe, recipes=all_recipes)
-    
+    recipe = mongo.db.add_recipes.find_one({"_id": ObjectId(recipe_id)})
+    return render_template("update_recipe.html", recipe=recipe)
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),

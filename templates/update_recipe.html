@@ -1,15 +1,6 @@
 {% extends "base.html" %} {% block content %}
-<div class="hero-block">
-  <img
-    class="hero-image"
-    src="static/images/add_recipe_img.png"
-    alt="hero-image"
-  />
-</div>
-<br />
-<br />
 
-<!-- Upload Recipes -->
+<!-- Update Recipes -->
 <h3 id="add_recipe_title">Update A Recipe</h3>
 <div class="row-card-panel grey lighten-5 container">
   <form class="col s12" method="POST" action="{{ url_for('add_recipes') }}">
@@ -17,6 +8,7 @@
       <!-- Author Name -->
       <div class="input-field col s12">
         <input
+          value="{{ recipe.recipe_name }}"
           id="author"
           name="author"
           type="text"
@@ -28,6 +20,7 @@
       <!-- Recipe Name -->
       <div class="input-field col s12">
         <input
+          value="{{ recipe.recipe_name }}"
           id="recipe_name"
           name="recipe_name"
           type="text"
@@ -41,6 +34,7 @@
       <!-- Upload Image -->
       <div class="input-field col s12">
         <input
+          value="{{ recipe.image_url }}"
           id="image_url"
           name="image_url"
           type="text"
@@ -55,6 +49,7 @@
       <!-- Description -->
       <div class="input-field col s12">
         <input
+          value="{{ recipe.description }}"
           id="description"
           name="description"
           minlength="10"
@@ -69,14 +64,28 @@
       </div>
       <!-- Preptime -->
       <div class="input-field col s12">
-        <input id="preptime" name="preptime" type="text" required />
+        <input
+          value="{{ recipe.preptime }}"
+          id="preptime"
+          name="preptime"
+          type="text"
+          class="validate"
+          required
+        />
         <label class="fas fa-clock" for="prep-time"
           >&nbsp;&nbsp;Prep Time</label
         >
       </div>
       <!-- Baking Time -->
       <div class="input-field col s12">
-        <input id="bakingtime" name="bakingtime" type="text" required />
+        <input
+          value="{{ recipe.bakingtime }}"
+          id="bakingtime"
+          name="bakingtime"
+          type="text"
+          class="validate"
+          required
+        />
         <label class="fas fa-hourglass-end" for="bakingtime"
           >&nbsp;&nbsp;Baking Time</label
         >
@@ -84,6 +93,7 @@
       <!-- Serves -->
       <div class="input-field col s12">
         <input
+          value="{{ recipe.serves }}"
           id="serves"
           name="serves"
           type="text"
@@ -95,6 +105,7 @@
       <!-- Ingredients -->
       <div class="input-field col s12">
         <input
+          value="{{ recipe.ingredients }}"
           id="ingredients"
           name="ingredients"
           type="text"
@@ -108,6 +119,7 @@
       <!-- Method -->
       <div class="input-field col s12">
         <input
+          value="{{ recipe.method }}"
           id="method"
           name="method"
           type="text"
@@ -120,7 +132,7 @@
       </div>
       <!-- Submit Button -->
       <button class="button" type="submit">
-        Upload Recipe
+        Update Recipe
         <i class="material-icons left"></i>
       </button>
     </div>
