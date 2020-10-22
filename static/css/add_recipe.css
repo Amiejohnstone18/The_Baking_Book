@@ -58,6 +58,10 @@
   font-size: 22px;
 }
 
+.button:focus{
+    background-color: #c6d2ed;
+}
+
 .input-field label {
   color: black;
   font-size: 18px;
@@ -66,3 +70,4 @@
 label span {
   font-family: "Libre Franklin", sans-serif;
 }
+
