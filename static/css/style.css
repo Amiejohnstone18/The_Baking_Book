@@ -1,9 +1,9 @@
 /* Nav Bar */
 .nav-colour {
   background-color: #c6d2ed;
-  font-family: "Libre Franklin", sans-serif;
 }
 
+/* Logo */
 .img-responsive {
   height: auto;
   width: auto;
@@ -11,145 +11,28 @@
   max-width: 250px;
 }
 
-/* Hero Image */
-
-/* Credit to Tutorial Repulic for assisting with the image/ text layout https://www.tutorialrepublic.com/faq/how-to-position-text-over-an-image-using-css.php#:~:text=Answer%3A%20Use%20the%20CSS%20position,the%20element).*/
-.hero-block {
-  position: relative;
-  display: inline-block; /* Make the width of box same as image */
+/* Nav Text */
+.home {
+    font-size: 20px;
 }
 
-/* Credit to Hero image animation from Code Institute Love Running Mini Project https://courses.codeinstitute.net/courses/course-v1:CodeInstitute+CF101+2017_T1/courseware/1f0ccaac7a3e43d895c1beae5363f46c/79eac486cc0c4c9aa54cbe54d009287c/?child=last */
-.hero-image {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 50px;
-  width: 50%;
-  animation-name: image-zoom;
-  animation-duration: 5s;
-  animation-fill-mode: forwards;
+.upload {
+    font-size: 20px;
 }
 
-@keyframes image-zoom {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(1.1);
-  }
-}
-
-.text {
-  position: absolute;
-  z-index: 999;
-  margin: 0 auto;
-  left: 0;
-  right: 0;
-  top: 10%; /* Adjust this value to move the positioned div up and down */
-  text-align: center;
-  width: 40%; /* Set the width of the positioned div */
-  color: white;
-  font-family: "Libre Franklin", sans-serif;
-}
-
-/* Recipe Cards */
-
-
-/* Add Recipes */
-#add_recipe_title {
-  font-family: "Libre Franklin", sans-serif;
-  text-align: center;
-}
-
-.row-card-panel {
-  margin-bottom: 30px;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+.fa-search {
+    font-size: 20px;
 }
 
 
-.button {
-  font-family: "Libre Franklin", sans-serif;
-  background-color: #c6d2ed;
-  color: white;
-  border: #c6d2ed solid 1px;
-  font-size: 20px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-}
-
-.button:hover {
-  font-weight: bold;
-  font-size: 22px;
-}
-
-/* View More */
-
-#background {
-  background-color: #dcdcdc;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-#recipe_img {
-  padding-left: 30px;
-  padding-right: 30px;
-}
-
-.recipe_name {
-  color: white;
-  font-family: "Libre Franklin", sans-serif;
-  margin-top: 30px;
-  text-align: center;
-  font-size: 50px;
-  font-weight: bold;
-}
-
-.symbols {
-  color: white;
-  font-family: "Libre Franklin", sans-serif;
-  font-size: 30px;
-  text-align: center;
-}
-
-.recipe_info{
-    font-family: "Libre Franklin", sans-serif;
-    font-size: 22px;
-    color: white;
-    text-align: center;
-}
 
 
-/* Ingredients */
-#more-ingredients {
-  color: white;
-  font-family: "Libre Franklin", sans-serif;
-  font-size: 20px;
-  text-align: center;
-}
-
-/* Method */
-#more-method {
-  color: white;
-  font-family: "Libre Franklin", sans-serif;
-  font-size: 20px;
-  text-align: center;
-}
-
-.btns-vm{
-    margin-bottom: 20px;
-    padding-left: 30px;
-}
 
 /* Footer */
 .page-footer {
   background-color: #c6d2ed;
   text-align: center;
   font-family: "Libre Franklin", sans-serif;
-  /* font-weight: bold; */
   font-size: 12px;
 }
 

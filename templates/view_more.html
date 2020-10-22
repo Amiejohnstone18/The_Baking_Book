@@ -1,5 +1,14 @@
 {% extends "base.html" %} {% block content %}
 
+{% block styles %}
+<!-- Index CSS-->
+     <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/view_more.css') }}"
+      type="text/css"
+    />
+{% endblock %}
+
 
 {% for recipe in recipe %}
 <div class="container" id="background">

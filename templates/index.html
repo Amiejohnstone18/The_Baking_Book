@@ -1,6 +1,15 @@
 {% extends "base.html" %} 
 {% block content %}
 
+{% block styles %}
+<!-- Index CSS-->
+     <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/index.css') }}"
+      type="text/css"
+    />
+{% endblock %}
+
 <div class="hero-block">
   <img
     class="hero-image"

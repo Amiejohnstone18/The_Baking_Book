@@ -1,0 +1,68 @@
+/* Credit to Tutorial Repulic for assisting with the image/ text layout https://www.tutorialrepublic.com/faq/how-to-position-text-over-an-image-using-css.php#:~:text=Answer%3A%20Use%20the%20CSS%20position,the%20element).*/
+.hero-block {
+  position: relative;
+  display: inline-block; /* Make the width of box same as image */
+}
+
+/* Credit to Hero image animation from Code Institute Love Running Mini Project https://courses.codeinstitute.net/courses/course-v1:CodeInstitute+CF101+2017_T1/courseware/1f0ccaac7a3e43d895c1beae5363f46c/79eac486cc0c4c9aa54cbe54d009287c/?child=last */
+.hero-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  width: 50%;
+  animation-name: image-zoom;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes image-zoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+/* Add Recipes */
+#add_recipe_title {
+  font-family: "Libre Franklin", sans-serif;
+  text-align: center;
+  font-size: 50px;
+}
+
+.row-card-panel {
+  margin-bottom: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  border: #dcdcdc solid 2px;
+}
+
+.button {
+  font-family: "Libre Franklin", sans-serif;
+  background-color: #c6d2ed;
+  color: white;
+  border: #dcdcdc solid 2px;
+  font-size: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-left: 10px;
+}
+
+.button:hover {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.input-field label {
+  color: black;
+  font-size: 18px;
+}
+
+label span {
+  font-family: "Libre Franklin", sans-serif;
+}

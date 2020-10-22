@@ -1,0 +1,45 @@
+/* Hero Image */
+
+/* Credit to Tutorial Repulic for assisting with the image/ text layout https://www.tutorialrepublic.com/faq/how-to-position-text-over-an-image-using-css.php#:~:text=Answer%3A%20Use%20the%20CSS%20position,the%20element).*/
+.hero-block {
+  position: relative;
+  display: inline-block; /* Make the width of box same as image */
+}
+
+/* Credit to Hero image animation from Code Institute Love Running Mini Project https://courses.codeinstitute.net/courses/course-v1:CodeInstitute+CF101+2017_T1/courseware/1f0ccaac7a3e43d895c1beae5363f46c/79eac486cc0c4c9aa54cbe54d009287c/?child=last */
+.hero-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  width: 50%;
+  animation-name: image-zoom;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes image-zoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+/* Hero Text */
+.text {
+  position: absolute;
+  z-index: 999;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 10%; /* Adjust this value to move the positioned div up and down */
+  text-align: center;
+  width: 40%; /* Set the width of the positioned div */
+  color: white;
+  font-family: "Libre Franklin", sans-serif;
+}
+
+/* Recipe Cards */
+

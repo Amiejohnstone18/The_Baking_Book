@@ -1,5 +1,16 @@
 {% extends "base.html" %} {% block content %}
 
+{% block styles %}
+<!-- Index CSS-->
+     <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/search.css') }}"
+      type="text/css"
+    />
+{% endblock %}
+
+
+
 <h1>Search for a Recipe</h1>
 
     <div class="row card- panel grey lighten-5">
