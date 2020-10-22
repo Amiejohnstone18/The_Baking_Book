@@ -47,9 +47,20 @@ def add_recipes():
 
 @app.route("/search", methods=["GET", "POST"])
 def search():
-    query = request.form.get("query")
-    add_recipes = mongo.db.add_recipes.find({"$text": {"$search": query}})
-    return render_template("search.html", add_recipes=add_recipes)
+    if request.method == "POST":
+        submit = {
+            "recipe_name": request.form.get("recipe_name"),
+            "image_url": request.form.get("image_url"),
+            "description": request.form.get("description"),
+            "preptime": request.form.get("preptime"),
+            "bakingtime": request.form.get("bakingtime"),
+            "serves": request.form.get("serves"),
+        }
+        query = request.form.get("query")
+        add_recipes = mongo.db.add_recipes.find({"$text": {"$search": query}})
+        return render_template("search.html", add_recipes=add_recipes)
+    else:
+        return render_template("search.html")
 
 
 @app.route("/view_more/<recipe_id>")
@@ -80,7 +91,7 @@ def update_recipe(recipe_id):
     return render_template("update_recipe.html", recipe=recipe)
 
 
-@app.route("/delete_recipe/<recipe_id>")
+@ app.route("/delete_recipe/<recipe_id>")
 def delete_recipe(recipe_id):
     mongo.db.add_recipes.remove({"_id": ObjectId(recipe_id)})
     flash("Recipe Deleted")
