@@ -1,0 +1,73 @@
+/* Update Recipes */
+
+#add_recipe_title {
+  font-family: "Libre Franklin", sans-serif;
+  text-align: center;
+  font-size: 50px;
+}
+
+.row-card-panel {
+  margin-bottom: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  background-color: white;
+  border: #dcdcdc solid 2px;
+  position: relative;
+}
+
+.input-field label {
+  color: black;
+  font-size: 20px;
+}
+
+label span {
+  font-family: "Libre Franklin", sans-serif;
+}
+
+.button-left {
+  font-family: "Libre Franklin", sans-serif;
+  background-color: #c6d2ed;
+  color: white;
+  border: #dcdcdc solid 2px;
+  font-size: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-left: 10px;
+  width: 5em;
+}
+
+.button-left:hover {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.button-left:focus {
+  background-color: #c6d2ed;
+}
+
+a {
+  color: white;
+}
+
+.button-right {
+  font-family: "Libre Franklin", sans-serif;
+  background-color: #c6d2ed;
+  border: #dcdcdc solid 2px;
+  font-size: 20px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  width: 5em;
+  text-align: center;
+  float: right;
+  margin-right: 10px;
+}
+
+.button-right:hover {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.button-right:focus {
+  background-color: #c6d2ed;
+}

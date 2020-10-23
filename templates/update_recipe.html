@@ -10,9 +10,10 @@
 {% endblock %}
 
 
+
 <!-- Update Recipes -->
-<h3 id="add_recipe_title">Update A Recipe</h3>
-<div class="row-card-panel grey lighten-5 container">
+<h3 id="add_recipe_title">Update Recipe</h3>
+<div class="row-card-panel container">
   <form class="col s12" method="POST" action="{{ url_for('update_recipe', recipe_id=recipe._id) }}">
     <div class="row">
       <!-- Author Name -->
@@ -25,7 +26,7 @@
           class="validate"
           required
         />
-        <label class="fas fa-user" for="author">&nbsp;&nbsp;Author</label>
+        <label class="fas fa-user" for="author">&nbsp;&nbsp;<span>Author</span></label>
       </div>
       <!-- Recipe Name -->
       <div class="input-field col s12">
@@ -38,7 +39,7 @@
           required
         />
         <label class="fas fa-cookie-bite" for="recipe_name"
-          >&nbsp;&nbsp;Recipe Name</label
+          >&nbsp;&nbsp;<span>Recipe Name</span></label
         >
       </div>
       <!-- Upload Image -->
@@ -52,7 +53,7 @@
           required
         />
         <label class="fas fa-images" for="image_url"
-          >&nbsp;&nbsp;Upload an Image Url</label
+          >&nbsp;&nbsp;<span>Upload an Image Url</span></label
         >
         <img src="{{ image_url }}" />
       </div>
@@ -69,7 +70,7 @@
           required
         />
         <label class="fas fa-plus-circle" for="description"
-          >&nbsp;&nbsp;Description</label
+          >&nbsp;&nbsp;<span>Description</span></label
         >
       </div>
       <!-- Preptime -->
@@ -83,7 +84,7 @@
           required
         />
         <label class="fas fa-clock" for="prep-time"
-          >&nbsp;&nbsp;Prep Time</label
+          >&nbsp;&nbsp;<span>Prep Time</span></label
         >
       </div>
       <!-- Baking Time -->
@@ -97,7 +98,7 @@
           required
         />
         <label class="fas fa-hourglass-end" for="bakingtime"
-          >&nbsp;&nbsp;Baking Time</label
+          >&nbsp;&nbsp;<span>Baking Time</span></label
         >
       </div>
       <!-- Serves -->
@@ -110,7 +111,7 @@
           class="validate"
           required
         />
-        <label class="fas fa-utensils" for="serves">&nbsp;&nbsp;Serves</label>
+        <label class="fas fa-utensils" for="serves">&nbsp;&nbsp;<span>Serves</span></label>
       </div>
       <!-- Ingredients -->
       <div class="input-field col s12">
@@ -123,7 +124,7 @@
           required
         />
         <label class="fas fa-mortar-pestle" for="ingredients"
-          >&nbsp;&nbsp;Ingredients</label
+          >&nbsp;&nbsp;<span>Ingredients</span></label
         >
       </div>
       <!-- Method -->
@@ -137,20 +138,19 @@
           required
         />
         <label class="fas fa-arrow-circle-down" for="method"
-          >&nbsp;&nbsp;Method</label
+          >&nbsp;&nbsp;<span>Method</span></label
         >
       </div>
       <!-- Submit Button -->
-      <button class="button" type="submit">
-        Update Recipe
-        <i class="material-icons left"></i>
+      <button class="button-left" type="submit">
+        Update 
       </button>
       <!-- Cancel Button -->
-      <a href="{{ url_for('index') }}" class="button">
+      <div class="button-right">
+      <a href="{{ url_for('index') }}">
       Cancel
-      <i class="material-icons right"></i>
       </a>
-
+        </div>
     </div>
   </form>
 </div>
