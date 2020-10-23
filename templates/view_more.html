@@ -23,21 +23,21 @@
     </div>
     <!-- Prep Time -->
     <div class="grid">
-    <div class="col s2">
+    <div class="col s4 m2">
     <div>{{ recipe.preptime }}</div>
     <br/>
       <i class="far fa-clock" id="preptime-vm"></i>
       <p>Prep Time</p>
     </div>
     <!-- Baking Time -->
-    <div class="col s2">
+    <div class="col s4 m2">
     <div>{{ recipe.bakingtime }}</div>
     <br/>
       <i class="fas fa-hourglass-end" id="bakingtime-vm"></i>
       <p>Baking Time</p>
     </div>
     <!-- Serves -->
-    <div class="col s2">
+    <div class="col s4 m2">
     <div>{{ recipe.serves }}</div>
     <br/>
       <i class="fas fa-utensils" id="serves-vm"></i>
@@ -63,13 +63,13 @@
     <!-- Update & Delete Buttons -->
     <a
       href="{{url_for('update_recipe', recipe_id=recipe._id)}}"
-      class="waves-effect waves-light btn"
+      class="btn"
       id="update-btn"
       >Update</a
     >
     <a
       href="{{url_for('delete_recipe', recipe_id=recipe._id)}}"
-      class="waves-effect waves-light btn"
+      class="btn"
       id="delete-btn"
       >Delete</a
     >
