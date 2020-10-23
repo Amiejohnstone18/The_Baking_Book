@@ -20,18 +20,25 @@
   font-weight: bold;
 }
 
-.symbols {
+/* Prep time/ Baking time/ Serves */
+.grid {
   color: white;
   font-family: "Libre Franklin", sans-serif;
-  font-size: 30px;
+  font-size: 24px;
   text-align: center;
+  margin-top: 30px;
 }
 
-.recipe_info{
-    font-family: "Libre Franklin", sans-serif;
-    font-size: 22px;
-    color: white;
-    text-align: center;
+#preptime-vm {
+  font-size: 2em;
+}
+
+#bakingtime-vm {
+  font-size: 2em;
+}
+
+#serves-vm {
+  font-size: 2em;
 }
 
 /* Ingredients */
@@ -53,4 +60,24 @@
 .btns-vm {
   margin-bottom: 20px;
   padding-left: 30px;
+}
+
+#update-btn {
+  font-family: "Libre Franklin", sans-serif;
+  background-color: #c6d2ed;
+  color: white;
+  border: #dcdcdc solid 2px;
+  font-size: 20px;
+  width: 6em;
+}
+
+#delete-btn {
+  font-family: "Libre Franklin", sans-serif;
+  background-color: #c6d2ed;
+  color: white;
+  border: #dcdcdc solid 2px;
+  font-size: 20px;
+  width: 6em;
+  float: right;
+  margin-right: 30px;
 }

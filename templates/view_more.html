@@ -1,75 +1,80 @@
-{% extends "base.html" %} {% block content %}
+{% extends "base.html" %} 
+{% block content %} 
 
 {% block styles %}
 <!-- Index CSS-->
-     <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='css/view_more.css') }}"
-      type="text/css"
-    />
-{% endblock %}
-
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='css/view_more.css') }}"
+  type="text/css"
+/>
+{% endblock %} 
 
 {% for recipe in recipe %}
 <div class="container" id="background">
-	<div class="row">
-		<!-- Image -->
-		<div class="col s12 m6" id="recipe_img">
-			<img class="responsive-img z-depth-3" src="{{ recipe.image_url }}" />
+  <div class="row">
+    <!-- Image -->
+    <div class="col s12 m6" id="recipe_img">
+      <img class="responsive-img z-depth-3" src="{{ recipe.image_url }}" />
+    </div>
+    <!-- Recipe Name -->
+    <div class="recipe_name">
+      {{ recipe.recipe_name }}
+    </div>
+    <!-- Prep Time -->
+    <div class="grid">
+    <div class="col s2">
+    <div>{{ recipe.preptime }}</div>
+    <br/>
+      <i class="far fa-clock" id="preptime-vm"></i>
+      <p>Prep Time</p>
+    </div>
+    <!-- Baking Time -->
+    <div class="col s2">
+    <div>{{ recipe.bakingtime }}</div>
+    <br/>
+      <i class="fas fa-hourglass-end" id="bakingtime-vm"></i>
+      <p>Baking Time</p>
+    </div>
+    <!-- Serves -->
+    <div class="col s2">
+    <div>{{ recipe.serves }}</div>
+    <br/>
+      <i class="fas fa-utensils" id="serves-vm"></i>
+      <p>Serves</p>
       </div>
-			<!-- Recipe Name -->
-			<div class="recipe_name">
-				{{ recipe.recipe_name }}
-			</div>
-			<br/>
-			<br/>
-			<div class="symbols">
-				<!-- Preptime -->
-				<div class="row">
-					<div class="col s4">
-						<i class="far fa-clock" id="preptime-vm">
-        <br/>
-         <br/>
-        {{ recipe.preptime }}
-        </i>
-						&nbsp; &nbsp; &nbsp;
-						<!-- Baking Time -->
-						<i class="fas fa-hourglass-end" id="bakingtime-vm">
-        <br />
-         <br/>
-        {{ recipe.bakingtime }} 
-        </i>
-						&nbsp; &nbsp; &nbsp;
-						<!-- Serves -->
-						<i class="fas fa-utensils" id="serves-vm">
-        <br />
-         <br/>
-        {{ recipe.serves }}
-        </i>
-						&nbsp; &nbsp; &nbsp;
-					</div>
-				</div>
-			</div>
-			<!-- Share -->
-		</div>
-		<!-- Ingredients -->
-		<div class="row">
-			<div class="col s12 m6" id="more-ingredients">
-				<h3> Ingredients </h3>
-				{{ recipe.ingredients }}
-			</div>
-			<!-- Method -->
-			<div class="col s12 m6" id="more-method">
-				<h3> Method </h3>
-				{{ recipe.method }}
-			</div>
-		</div>
-		<div class="btns-vm">
-			<!-- Update & Delete Buttons -->
-			<a href="{{url_for('update_recipe', recipe_id=recipe._id)}}" class="waves-effect waves-light btn" id="update-btn">Update</a>
-			<a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}" class="waves-effect waves-light btn" id="delete-btn">Delete</a>
-		</div>
-	</div>
-	{% endfor %}
+    </div>
+  </div>
 
-	{% endblock %}
+  <!-- Ingredients -->
+  <div class="row">
+    <div class="col s12 m6" id="more-ingredients">
+      <h3>Ingredients</h3>
+      {{ recipe.ingredients }}
+    </div>
+    <!-- Method -->
+    <div class="col s12 m6" id="more-method">
+      <h3>Method</h3>
+      {{ recipe.method }}
+    </div>
+  </div>
+  <div class="btns-vm">
+
+    <!-- Update & Delete Buttons -->
+    <a
+      href="{{url_for('update_recipe', recipe_id=recipe._id)}}"
+      class="waves-effect waves-light btn"
+      id="update-btn"
+      >Update</a
+    >
+    <a
+      href="{{url_for('delete_recipe', recipe_id=recipe._id)}}"
+      class="waves-effect waves-light btn"
+      id="delete-btn"
+      >Delete</a
+    >
+  </div>
+  {% endfor %}
+</div>
+
+{% endblock %}
