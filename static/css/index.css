@@ -45,8 +45,9 @@
 /* Recipe Cards */
 .card{
     overflow: hidden;
-    max-height: 600px;
+    min-height: 360px;
     display: block;
+
 }
 
 .card-content{

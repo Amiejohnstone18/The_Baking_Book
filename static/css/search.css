@@ -19,3 +19,10 @@
 .btn:hover {
     background-color: #c6d2ed;
 }
+
+/* Recipe Cards */
+.card{
+    overflow: hidden;
+    min-height: 360px;
+    display: block;
+}
