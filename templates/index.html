@@ -1,13 +1,10 @@
-{% extends "base.html" %} 
-{% block content %}
-
-{% block styles %}
+{% extends "base.html" %} {% block content %} {% block styles %}
 <!-- Index CSS-->
-     <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='css/index.css') }}"
-      type="text/css"
-    />
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='css/index.css') }}"
+  type="text/css"
+/>
 {% endblock %}
 
 <div class="hero-block">
@@ -17,8 +14,10 @@
     alt="hero-image"
   />
   <div class="text">
-  <!-- Credit to responsive typography from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_responsive_text -->
-    <h2 style="font-size:4vw;">Explore and share a variety of home made dessert recipes</h2>
+    <!-- Credit to responsive typography from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_responsive_text -->
+    <h2 style="font-size: 3vw;">
+      Explore and share a variety of home made dessert recipes
+    </h2>
   </div>
 </div>
 
@@ -29,16 +28,22 @@
 
 <div class="container">
   <div class="row">
-  {% for recipe in add_recipes %}
+    {% for recipe in add_recipes %}
     <div class="col s12 m3">
       <div class="card">
         <!-- Image -->
-        <div class="card-image waves-effect waves-block waves-light">
-          <img class="activator" src="{{ recipe.image_url }}" width="500" height="200"/>
+        <div class="card-image">
+          <img
+            class="activator"
+            id="recipe-cards"
+            src="{{ recipe.image_url }}"
+            width="500"
+            height="200"
+          />
         </div>
         <!-- Recipe Name-->
         <div class="card-content">
-          <span class="card-title activator grey-text text-darken-4">
+          <span class="card-title activator">
             {{ recipe.recipe_name }} <br />
             <i class="fas fa-ellipsis-h"></i
           ></span>
@@ -46,18 +51,31 @@
         <!-- Recipe Name -->
         <div class="card-reveal">
           <span class="card-title grey-text text-darken-4"
-            >{{ recipe.recipe_name }} <i class="fas fa-times"></i
-          ></span>
+            ><i class="fas fa-times"></i>
+            <br />
+            {{ recipe.recipe_name }}</span
+          >
           <!-- Preptime/ Bakingtime/ Serves -->
           <ul>
-            <i class="far fa-clock"> {{ recipe.preptime }}</i>
-            <i class="fas fa-hourglass-end"> {{ recipe.bakingtime }}</i>
-            <i class="fas fa-utensils"> {{ recipe.serves }}</i>
+            <i class="far fa-clock"></i
+            >&nbsp;&nbsp; {{ recipe.preptime }}
+            <br />
+            <i class="fas fa-hourglass-end"></i
+            >&nbsp;&nbsp;&nbsp; {{ recipe.bakingtime }}
+            <br />
+            <i class="fas fa-utensils"></i
+            >&nbsp;&nbsp;&nbsp; {{ recipe.serves }}
           </ul>
           <!-- Description -->
-          <p>{{ recipe.description }}</p>
+          <p id="description">{{ recipe.description }}</p>
           <!-- View More -->
-          <p><a href="{{ url_for('view_more', recipe_id=recipe._id) }}">View More</a></p>
+          <p>
+            <a
+              href="{{ url_for('view_more', recipe_id=recipe._id) }}"
+              id="view-more"
+              >View More</a
+            >
+          </p>
         </div>
       </div>
     </div>

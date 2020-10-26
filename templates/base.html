@@ -29,8 +29,7 @@
       href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@200&display=swap"
       rel="stylesheet"
     />
-    {% block styles %} 
-    {% endblock %}
+    {% block styles %} {% endblock %}
 
     <title>The Baking Book</title>
   </head>
@@ -41,7 +40,10 @@
       <nav class="nav-colour">
         <div class="nav-wrapper">
           <a href="{{ url_for('index') }}" class="brand-logo">
-            <img class="img-responsive" src="{{ url_for('static', filename='images/logo.png') }}" alt="logo"
+            <img
+              class="img-responsive"
+              src="{{ url_for('static', filename='images/logo.png') }}"
+              alt="logo"
           /></a>
 
           <a href="#" data-target="mobile-demo" class="sidenav-trigger"
@@ -49,8 +51,14 @@
           ></a>
           <ul class="right hide-on-med-and-down">
             <li><a href="{{ url_for('index') }}" class="home">Home</a></li>
-            <li><a href="{{ url_for('add_recipes') }}" class="upload" >Upload Recipes</a></li>
-            <li><a href="{{ url_for('search') }}" class="fas fa-search"></a></li>
+            <li>
+              <a href="{{ url_for('add_recipes') }}" class="upload"
+                >Upload Recipes</a
+              >
+            </li>
+            <li>
+              <a href="{{ url_for('search') }}" class="fas fa-search"></a>
+            </li>
           </ul>
         </div>
       </nav>
@@ -58,31 +66,44 @@
       <!-- Mobile Nav Bar-->
       <ul class="sidenav" id="mobile-demo">
         <li><h3 class="center-align">The Baking Book</h3></li>
-        <li><a href="{{ url_for('index') }}">Home</a></li>
-        <li><a href="{{ url_for('add_recipes') }}">Upload Recipes</a></li>
-        <li><a href="{{ url_for('search') }}" class="fas fa-search"></a></li>
+        <li><a href="{{ url_for('index') }}" id="home">Home</a></li>
+        <li>
+          <a href="{{ url_for('add_recipes') }}" id="upload">Upload Recipes</a>
+        </li>
+        <li><a href="{{ url_for('search') }}" id="search">Search</a></li>
       </ul>
     </header>
 
-    {% block content %}
-    {% endblock %}
+    <!-- Code taken from Code Institute Mini Flask Project https://github.com/Code-Institute-Solutions/TaskManager/blob/flask-rebuild-2020/08-SearchingWithinTheDatabase/01-text_index_searching/templates/base.html -->
+
+    <section>
+      <!-- flash messages -->
+      {% with messages = get_flashed_messages() %} {% if messages %} {% for
+      message in messages %}
+      <div class="flash-message">
+        <h4 class="center-align" id="flash-message">{{ message }}</h4>
+      </div>
+      {% endfor %} {% endif %} {% endwith %}
+    </section>
+
+    {% block content %} {% endblock %}
 
     <!-- Footer Menu -->
     <footer class="page-footer">
       <div class="footer-copyright">
         <div class="container">
           ©2020 Copyright Amie Johnstone (For Educational Purposes Only)
-           </div>
-        <div class="social-icons">
-          <a href="https://www.facebook.com/" target="_blank"
-            ><li class="fab fa-facebook"></li
-          ></a>
-          <a href="https://www.instagram.com/" target="_blank"
-            ><li class="fab fa-instagram-square"></li
-          ></a>
-          <a href="https://www.pinterest.co.uk/" target="_blank"
-            ><li class="fab fa-pinterest"></li
-          ></a>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/" target="_blank"
+              ><li class="fab fa-facebook"></li
+            ></a>
+            <a href="https://www.instagram.com/" target="_blank"
+              ><li class="fab fa-instagram-square"></li
+            ></a>
+            <a href="https://www.pinterest.co.uk/" target="_blank"
+              ><li class="fab fa-pinterest"></li
+            ></a>
+          </div>
         </div>
       </div>
     </footer>

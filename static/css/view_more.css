@@ -81,3 +81,23 @@
   float: right;
   margin-right: 30px;
 }
+
+
+@media screen and (max-width: 992px) {
+.grid {
+  font-size: 18px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+#preptime-vm {
+  font-size: 0.5em;
+}
+
+#bakingtime-vm {
+  font-size: 2em;
+}
+
+#serves-vm {
+  font-size: 2em;
+}

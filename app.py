@@ -95,7 +95,7 @@ def update_recipe(recipe_id):
 def delete_recipe(recipe_id):
     mongo.db.add_recipes.remove({"_id": ObjectId(recipe_id)})
     flash("Recipe Deleted")
-    return redirect(url_for("index"))
+    return redirect(url_for("add_recipes"))
 
 
 if __name__ == "__main__":

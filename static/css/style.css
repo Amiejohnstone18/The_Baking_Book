@@ -7,26 +7,55 @@
 .img-responsive {
   height: auto;
   width: auto;
-  max-height: 67px;
+  max-height: 60px;
   max-width: 250px;
+  padding-top: 5px;
+  padding-left: 10px;
 }
 
 /* Nav Text */
 .home {
-    font-size: 20px;
+  font-size: 18px;
 }
 
 .upload {
-    font-size: 20px;
+  font-size: 18px;
 }
 
-.fa-search {
-    font-size: 20px;
+.fa-search:focus {
+  font-size: 20px;
 }
 
+/* Side Nav */
+.sidenav {
+  background-color: #c6d2ed;
+  font-family: "Libre Franklin", sans-serif;
+  color: white;
+}
 
+#home {
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 18px;
+  color: white;
+}
 
+#upload {
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 18px;
+  color: white;
+}
 
+#search {
+  font-size: 18px;
+  color: white;
+}
+
+/* Flash Message */
+
+.flash-message {
+  font-family: "Libre Franklin", sans-serif;
+  color: #c6d2ed;
+}
 
 /* Footer */
 .page-footer {
@@ -34,6 +63,10 @@
   text-align: center;
   font-family: "Libre Franklin", sans-serif;
   font-size: 12px;
+}
+
+.footer-copyright {
+  text-align: center;
 }
 
 body {
@@ -47,9 +80,9 @@ main {
 }
 
 .social-icons {
-  float: left;
+  float: right;
   font-size: 20px;
-  margin-right: 10px;
+  margin-right: 2px;
 }
 
 .fa-facebook {

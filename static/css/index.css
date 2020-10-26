@@ -34,12 +34,36 @@
   margin: 0 auto;
   left: 0;
   right: 0;
-  top: 10%; /* Adjust this value to move the positioned div up and down */
+  top: 35%;
   text-align: center;
-  width: 40%; /* Set the width of the positioned div */
+  width: 40%; 
   color: white;
   font-family: "Libre Franklin", sans-serif;
+  font-size: 20px;
 }
 
 /* Recipe Cards */
+.card{
+    overflow: hidden;
+    max-height: 600px;
+    display: block;
+}
 
+.card-content{
+    font-size: 10px;
+}
+
+ul {
+    font-size: 16px;
+    font-family: "Libre Franklin", sans-serif;
+}
+
+#description {
+    font-size: 16px;
+    font-family: "Libre Franklin", sans-serif;
+}
+
+#view-more {
+    text-decoration: underline;
+    font-family: "Libre Franklin", sans-serif;
+}
