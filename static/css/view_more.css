@@ -24,21 +24,21 @@
 .grid {
   color: white;
   font-family: "Libre Franklin", sans-serif;
-  font-size: 24px;
+  font-size: 20px;
   text-align: center;
   margin-top: 30px;
 }
 
 #preptime-vm {
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 #bakingtime-vm {
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 #serves-vm {
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 /* Ingredients */
@@ -83,21 +83,22 @@
 }
 
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 600px) {
 .grid {
   font-size: 18px;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 #preptime-vm {
-  font-size: 0.5em;
+  font-size: 15px;
 }
 
 #bakingtime-vm {
-  font-size: 2em;
+  font-size: 15px;
 }
 
 #serves-vm {
-  font-size: 2em;
+  font-size: 15px;
+}
 }

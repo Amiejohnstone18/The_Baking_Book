@@ -44,14 +44,7 @@
 
 /* Recipe Cards */
 .card{
-    overflow: hidden;
     min-height: 360px;
-    display: block;
-
-}
-
-.card-content{
-    font-size: 10px;
 }
 
 ul {
@@ -68,3 +61,4 @@ ul {
     text-decoration: underline;
     font-family: "Libre Franklin", sans-serif;
 }
+

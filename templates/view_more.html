@@ -14,7 +14,7 @@
 <div class="container" id="background">
   <div class="row">
     <!-- Image -->
-    <div class="col s12 m6" id="recipe_img">
+    <div class="col s12 l6" id="recipe_img">
       <img class="responsive-img z-depth-3" src="{{ recipe.image_url }}" />
     </div>
     <!-- Recipe Name -->
@@ -23,21 +23,21 @@
     </div>
     <!-- Prep Time -->
     <div class="grid">
-    <div class="col s4 m2">
+    <div class="col s4 l2">
     <div>{{ recipe.preptime }}</div>
     <br/>
       <i class="far fa-clock" id="preptime-vm"></i>
       <p>Prep Time</p>
     </div>
     <!-- Baking Time -->
-    <div class="col s4 m2">
+    <div class="col s4 l2">
     <div>{{ recipe.bakingtime }}</div>
     <br/>
       <i class="fas fa-hourglass-end" id="bakingtime-vm"></i>
       <p>Baking Time</p>
     </div>
     <!-- Serves -->
-    <div class="col s4 m2">
+    <div class="col s4 l2">
     <div>{{ recipe.serves }}</div>
     <br/>
       <i class="fas fa-utensils" id="serves-vm"></i>
@@ -70,7 +70,7 @@
     <a
       href="{{url_for('delete_recipe', recipe_id=recipe._id)}}"
       class="btn"
-      id="delete-btn"
+      id="delete-btn" onclick="document.getElementById('delete').style.display='block'"
       >Delete</a
     >
   </div>
