@@ -35,10 +35,10 @@ def add_recipes():
             "preptime": request.form.get("preptime"),
             "bakingtime": request.form.get("bakingtime"),
             "serves": request.form.get("serves"),
-            "ingredients": request.form.get("ingredients"),
-            "method": request.form.get("method")
+            "ingredients": request.form.get("ingredients").split('\r\n'),
+            "method": request.form.get("method").split('\r\n')
         }
-
+        print(recipe['ingredients'])
         mongo.db.add_recipes.insert_one(recipe)
         flash("Recipe Uploaded")
         return redirect(url_for("add_recipes"))
@@ -65,7 +65,8 @@ def search():
 
 @app.route("/view_more/<recipe_id>")
 def view_more(recipe_id):
-    recipe = mongo.db.add_recipes.find({"_id": ObjectId(recipe_id)})
+    recipe = mongo.db.add_recipes.find_one({"_id": ObjectId(recipe_id)})
+    print(recipe)
     return render_template("view_more.html", recipe=recipe)
 
 
@@ -80,8 +81,8 @@ def update_recipe(recipe_id):
             "preptime": request.form.get("preptime"),
             "bakingtime": request.form.get("bakingtime"),
             "serves": request.form.get("serves"),
-            "ingredients": request.form.get("ingredients"),
-            "method": request.form.get("method")
+            "ingredients": request.form.get("ingredients").split('\r\n'),
+            "method": request.form.get("method").split('\r\n')
         }
 
         mongo.db.add_recipes.update({"_id": ObjectId(recipe_id)}, submit)
