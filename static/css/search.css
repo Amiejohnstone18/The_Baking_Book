@@ -1,28 +1,29 @@
-.search_recipe{
-    font-family: "Libre Franklin", sans-serif;
+/* Search */
+.search_recipe {
+  font-family: "Libre Franklin", sans-serif;
   text-align: center;
   font-size: 50px;
   margin-bottom: 70px;
 }
 
-#search-icon{
-    color: #c6d2ed;
+#search-icon {
+  color: #c6d2ed;
 }
 
 .btn {
-    background-color: #c6d2ed;
-    font-size: 16px;
-    margin: 5px;
-    width: 20em;
+  background-color: #c6d2ed;
+  font-size: 16px;
+  margin: 5px;
+  width: 20em;
 }
 
 .btn:hover {
-    background-color: #c6d2ed;
+  background-color: #c6d2ed;
 }
 
 /* Recipe Cards */
-.card{
-    overflow: hidden;
-    min-height: 360px;
-    display: block;
+.card {
+  overflow: hidden;
+  min-height: 360px;
+  display: block;
 }

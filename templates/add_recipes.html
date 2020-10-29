@@ -1,7 +1,4 @@
-{% extends "base.html" %} 
-{% block content %} 
-
-{% block styles %}
+{% extends "base.html" %} {% block content %} {% block styles %}
 <!-- Index CSS-->
 <link
   rel="stylesheet"
@@ -43,6 +40,8 @@
         <input
           id="recipe_name"
           name="recipe_name"
+          minlength="3"
+          maxlength="20"
           type="text"
           class="validate"
           required
@@ -80,16 +79,30 @@
           >&nbsp;&nbsp;<span>Description</span></label
         >
       </div>
-      <!-- Preptime -->
+      <!-- Prep Time -->
       <div class="input-field col s12">
-        <input id="preptime" name="preptime" type="text" required />
+        <input
+          id="preptime"
+          name="preptime"
+          minlength="3"
+          maxlength="8"
+          type="text"
+          required
+        />
         <label class="fas fa-clock" for="prep-time"
           >&nbsp;&nbsp;<span>Prep Time</span></label
         >
       </div>
       <!-- Baking Time -->
       <div class="input-field col s12">
-        <input id="bakingtime" name="bakingtime" type="text" required />
+        <input
+          id="bakingtime"
+          name="bakingtime"
+          minlength="3"
+          maxlength="8"
+          type="text"
+          required
+        />
         <label class="fas fa-hourglass-end" for="bakingtime"
           >&nbsp;&nbsp;<span>Baking Time</span></label
         >
@@ -99,6 +112,8 @@
         <input
           id="serves"
           name="serves"
+          minlength="1"
+          maxlength="5"
           type="text"
           class="validate"
           required
@@ -109,25 +124,41 @@
       </div>
       <!-- Ingredients -->
       <div class="input-field col s12">
-      <label class="fas fa-mortar-pestle" for="ingredients"
+        <label class="fas fa-mortar-pestle" for="ingredients"
           >&nbsp;&nbsp;<span>Ingredients</span></label
         >
-        <br/>
-        <br/>
-      <textarea id="ingredients" name="ingredients" type="text"
-          class="validate" placeholder="Enter each ingredient on a new line" required></textarea>
+        <br />
+        <br />
+        <textarea
+          id="ingredients"
+          name="ingredients"
+          minlength="10"
+          maxlength="500"
+          type="text"
+          class="validate"
+          placeholder="Enter each ingredient on a new line"
+          required
+        ></textarea>
       </div>
       <!-- Method -->
       <div class="input-field col s12">
-      <label class="fas fa-arrow-circle-down" for="method"
+        <label class="fas fa-arrow-circle-down" for="method"
           >&nbsp;&nbsp;<span>Method</span></label
         >
-        <br/>
-        <br/>
-        <textarea id="method" name="method" type="text"
-          class="validate" placeholder="Enter each method on a new line" required></textarea>
+        <br />
+        <br />
+        <textarea
+          id="method"
+          name="method"
+          minlength="10"
+          maxlength="500"
+          type="text"
+          class="validate"
+          placeholder="Enter each method on a new line"
+          required
+        ></textarea>
       </div>
-      <!-- Submit Button -->
+      <!-- Submit -->
       <button class="button" type="submit">
         Upload Recipe
         <i class="material-icons left"></i>

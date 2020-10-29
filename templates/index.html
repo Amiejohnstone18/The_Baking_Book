@@ -1,5 +1,5 @@
 {% extends "base.html" %} {% block content %} {% block styles %}
-<!-- Index CSS-->
+<!-- Index CSS -->
 <link
   rel="stylesheet"
   href="{{ url_for('static', filename='css/index.css') }}"
@@ -25,7 +25,6 @@
 <br />
 
 <!-- Recipe Cards -->
-
 <div class="container">
   <div class="row">
     {% for recipe in add_recipes %}

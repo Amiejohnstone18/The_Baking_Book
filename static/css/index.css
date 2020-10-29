@@ -1,5 +1,4 @@
 /* Hero Image */
-
 /* Credit to Tutorial Repulic for assisting with the image/ text layout https://www.tutorialrepublic.com/faq/how-to-position-text-over-an-image-using-css.php#:~:text=Answer%3A%20Use%20the%20CSS%20position,the%20element).*/
 .hero-block {
   position: relative;
@@ -36,29 +35,28 @@
   right: 0;
   top: 35%;
   text-align: center;
-  width: 40%; 
+  width: 40%;
   color: white;
   font-family: "Libre Franklin", sans-serif;
   font-size: 20px;
 }
 
 /* Recipe Cards */
-.card{
-    min-height: 360px;
+.card {
+  min-height: 360px;
 }
 
 ul {
-    font-size: 16px;
-    font-family: "Libre Franklin", sans-serif;
+  font-size: 16px;
+  font-family: "Libre Franklin", sans-serif;
 }
 
 #description {
-    font-size: 16px;
-    font-family: "Libre Franklin", sans-serif;
+  font-size: 16px;
+  font-family: "Libre Franklin", sans-serif;
 }
 
 #view-more {
-    text-decoration: underline;
-    font-family: "Libre Franklin", sans-serif;
+  text-decoration: underline;
+  font-family: "Libre Franklin", sans-serif;
 }
-

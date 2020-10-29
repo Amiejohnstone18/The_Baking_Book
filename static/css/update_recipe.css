@@ -1,5 +1,4 @@
 /* Update Recipes */
-
 #add_recipe_title {
   font-family: "Libre Franklin", sans-serif;
   text-align: center;
@@ -25,6 +24,7 @@ label span {
   font-family: "Libre Franklin", sans-serif;
 }
 
+/* Button Left */
 .button-left {
   font-family: "Libre Franklin", sans-serif;
   background-color: #c6d2ed;
@@ -50,6 +50,7 @@ a {
   color: white;
 }
 
+/* Button Right */
 .button-right {
   font-family: "Libre Franklin", sans-serif;
   background-color: #c6d2ed;

@@ -38,7 +38,6 @@ def add_recipes():
             "ingredients": request.form.get("ingredients").split('\r\n'),
             "method": request.form.get("method").split('\r\n')
         }
-        print(recipe['ingredients'])
         mongo.db.add_recipes.insert_one(recipe)
         flash("Recipe Uploaded")
         return redirect(url_for("add_recipes"))

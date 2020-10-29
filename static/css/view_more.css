@@ -1,5 +1,4 @@
 /* View More */
-
 #background {
   background-color: #dcdcdc;
   margin-top: 20px;
@@ -49,6 +48,10 @@
   text-align: center;
 }
 
+.align {
+  text-align: left;
+}
+
 /* Method */
 #more-method {
   color: white;
@@ -82,23 +85,22 @@
   margin-right: 30px;
 }
 
-
 @media screen and (max-width: 600px) {
-.grid {
-  font-size: 18px;
-  text-align: center;
-  margin-top: 10px;
-}
+  .grid {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 10px;
+  }
 
-#preptime-vm {
-  font-size: 15px;
-}
+  #preptime-vm {
+    font-size: 15px;
+  }
 
-#bakingtime-vm {
-  font-size: 15px;
-}
+  #bakingtime-vm {
+    font-size: 15px;
+  }
 
-#serves-vm {
-  font-size: 15px;
-}
+  #serves-vm {
+    font-size: 15px;
+  }
 }

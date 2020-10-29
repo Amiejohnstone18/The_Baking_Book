@@ -1,7 +1,7 @@
 /* Credit to Tutorial Repulic for assisting with the image/ text layout https://www.tutorialrepublic.com/faq/how-to-position-text-over-an-image-using-css.php#:~:text=Answer%3A%20Use%20the%20CSS%20position,the%20element).*/
 .hero-block {
   position: relative;
-  display: inline-block; /* Make the width of box same as image */
+  display: inline-block;
 }
 
 /* Credit to Hero image animation from Code Institute Love Running Mini Project https://courses.codeinstitute.net/courses/course-v1:CodeInstitute+CF101+2017_T1/courseware/1f0ccaac7a3e43d895c1beae5363f46c/79eac486cc0c4c9aa54cbe54d009287c/?child=last */
@@ -42,6 +42,7 @@
   border: #dcdcdc solid 2px;
 }
 
+/* Button */
 .button {
   font-family: "Libre Franklin", sans-serif;
   background-color: #c6d2ed;
@@ -58,8 +59,8 @@
   font-size: 22px;
 }
 
-.button:focus{
-    background-color: #c6d2ed;
+.button:focus {
+  background-color: #c6d2ed;
 }
 
 .input-field label {
@@ -70,4 +71,3 @@
 label span {
   font-family: "Libre Franklin", sans-serif;
 }
-
