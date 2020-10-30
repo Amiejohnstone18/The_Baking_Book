@@ -1,9 +1,9 @@
 # The Baking Book 
-*** image ***
+![image](docs/responsive.png)
 
-The Baking Book is a user friendly, home made dessert recipe website. Users can manipulate the platform and data to view, upload, modify and delete recipes of their choice. The website is straight forward and easy for the user to navigate around. 
+[The Baking Book](https://the-baking-book.herokuapp.com/index) is a user friendly, home made dessert recipe website. Users can manipulate the platform and data to view, upload, modify and delete recipes of their choice. The website is straight forward and easy for the user to navigate around. 
 
-Recipes are presented in the form of cards which display on the home page. From here, a user can gain quick access to brief information via clicking on the 3 dots provided. There is also an option to view more, which will take the user to a full description of the recipe, including recipe name, image, prep time, baking time, how many people it serves, ingredients and the method.
+Recipes are presented in the form of cards which display on the home page. From here, a user can gain quick access to brief information via clicking on the three dots provided. There is also an option to [view more](https://the-baking-book.herokuapp.com/view_more/5f9b12db20f341c17f6f6882), which will take the user to a full description of the recipe, including recipe name, image, prep time, baking time, how many people it serves, ingredients and the method.
 
 
 # Table of contents
@@ -33,7 +33,7 @@ Recipes are presented in the form of cards which display on the home page. From 
 
 **Strategy**
 
-The reason for building The Baking Book is to allow users to gain quick access to dessert recipes. This website would be useful for experienced and in-experienced bakers looking for easy to follow recipes to make in the comfort of their own home. Through using CRUD functionality, users can create, read, update and delete recipes on the website. There is also a search feature which allows users to search a MongoDB created index of recipe names, description and ingredients. 
+The reason for building [The Baking Book](https://the-baking-book.herokuapp.com/index) is to allow users to gain quick access to dessert recipes. This website would be useful for experienced and in-experienced bakers looking for easy to follow recipes to make in the comfort of their own home. Through using [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) functionality, users can create, read, update and delete recipes on the website. There is also a search feature which allows users to search a [MongoDB](https://www.mongodb.com/) created index of recipe names, description and ingredients. 
 
 To ensure I could properly fulfil the users' needs and objectives, I asked three individuals to provide me with real-life user situations about a recipe website which may aide me in ensuring I was targeting the right features and ideas.
 
@@ -59,24 +59,22 @@ Due to my strategic goals, it is important to give users control to create, read
 * Links to full description pages from the cards will then provide the option to read, update and delete that specific recipe. 
 * A separate page will be presented for users to upload their own recipes which will require a combination of text and image URLs.
 * A search feature displayed in the Nav menu will permit users to filter through the website searching for specific recipes or ingredients. 
-* Links to social media platforms Facebook, Pinterest and Instagram will be displayed in the footer.
+* Links to social media platforms [Facebook](https://www.facebook.com/), [Pinterest](https://www.pinterest.co.uk/) and [Instagram](https://www.instagram.com/) will be displayed in the footer.
 * A mobile navigation menu will aim to maintain the applications responsiveness on smaller viewports. 
-
-
 
 
 **Structure** 
 
-Given the functional requirements of this application, the interaction design of this website means that users can effectively accomplish their goals for engaging with the website. However, to ensure the interaction design is well thought out and works in practice, through using Flash Messages users will be informed of changes they've made to recipes, if they delete a recipe they will be asked to confirm this decision to ensure it is not a potentially harmful mistake. Should no results be found within their filter search, they will be informed of this. Once a user has interacted with the website for example, uploaded a recipe or deleted one, they will then be redirected to an appropriate page to carry on with their journey through the website. 
+Given the functional requirements of this application, the interaction design of this website means that users can effectively accomplish their goals for engaging with the website. However, to ensure the interaction design is well thought out and works in practice, through using [Flask](https://en.wikipedia.org/wiki/Flask_(web_framework)) flash messages, users will be informed of changes they've made to recipes. Once a user has interacted with the website for example, uploaded a recipe or deleted one, they will then be redirected to an appropriate page to carry on with their journey through the website. 
 
-It is imperative that the information architecture is appropriately displayed across the website. To avoid the issue of presenting too much content on a page and deterring the user from continuing, keeping the information relative and prioritising sections based on user interactions and needs will be most effective. For this reason, a user will only be able to gain access to a full recipes description once clicking on the view more option from the index recipe cards. From there, they can read, update and delete selected recipe. This will avoid presenting users with a list of full recipe descriptions which could prove to be an overload of information. The navigation menu will consist of the home page, upload a recipe and search feature. Ensuring to keep the movement around the application simple for the user, the aim is to ensure users don't get lost on their journey.   
+It is imperative that the information architecture is appropriately displayed across the website. To avoid the issue of presenting too much content on a page and deterring the user from continuing, keeping the information relative and prioritising sections based on user interactions and needs will be most effective. For this reason, a user will only be able to gain access to a full recipes description once clicking on the view more option from the [index](https://the-baking-book.herokuapp.com/index) recipe cards. From there, they can read, update and delete selected recipe. This will avoid presenting users with a list of full recipe descriptions which could prove to be an overload of information. The navigation menu will consist of the [home](https://the-baking-book.herokuapp.com/index) page, [upload a recipe](https://the-baking-book.herokuapp.com/add_recipes) and the [search](https://the-baking-book.herokuapp.com/search) feature. Ensuring to keep the movement around the application simple for the user, the aim is to ensure users don't get lost on their journey.   
 
 
 **Skeleton**
 
-Initially, I had designed the website to include further features such as a user's personal account where they would be able to login and have access to their favourite recipes. I had also designed the application to include a star rating system, based on user experiences with the recipes. However, after discussing this with my Mentor, Aaron Sinnott, during my first project interpretation mentor session, we had decided to deter away from those features to be able to solely focus on the criteria at hand. Below is a screen grab of how my wireframes had initially been designed. 
+Initially, I had designed the website to include further features such as a user's personal account where they would be able to login and have access to their favourite recipes. I had also designed the application to include a star rating system, based on user experiences with the recipes. However, after discussing this with my Mentor, Aaron Sinnott, during my first project interpretation mentor session, we had decided to deter away from those features to be able to solely focus on the criteria at hand. Below is a screen grab of how my [wireframes](https://en.wikipedia.org/wiki/Wireframe) had initially been designed. 
 
-*** Old wireframes ***
+![wireframae-1](docs/original-wireframes.png)
 
 After the discussion with Aaron, I had modified the wireframes to ensure the remaining interaction design, information architecture, navigation and features could remain to be displayed appropriately to allow the user to continue to interact with the functionality of the website effectively. This also meant rethinking the interface design of re-direct page links and the navigation design. 
 
@@ -84,35 +82,36 @@ After the discussion with Aaron, I had modified the wireframes to ensure the rem
 *** Insert new wireframes ***
 
 
-All wireframes were created using Adobe InDesign and can all be accessed from the wireframes document here. 
+All wireframes were created using [Adobe InDesign](https://www.adobe.com/uk/products/indesign.html) and can all be accessed from the wireframes document here. 
 
 
 **Surface** 
 
-The website will use the Materialize Library for components such as the cards, buttons, navigation menus and footer, as well as the text input form to allow users to upload and update a recipe. 
+The website will use the [Materialize](https://materializecss.com/) Library for components such as the [cards](https://materializecss.com/cards.html), [buttons](https://materializecss.com/buttons.html), [navigation](https://materializecss.com/navbar.html) and [footer,](https://materializecss.com/footer.html) as well as the [text input](https://materializecss.com/text-inputs.html) form to allow users to upload and update a recipe. 
 
 Due to the number of recipe images that will be displayed, I thought it best to keep the colour scheme simple using #c6d2ed for the navigation and footer menu's along with various buttons that are used. Throughout the website, that along with #dcdcdc will be used to ensure the website is visually pleasing and maintains consistency. Using black and white border colours will ensure the user is aware of the feature displayed and whether to interact with it or not. 
 
-The typography will be taken from Google Fonts and styled as 'Libre Franklin', sans-serif. I felt this was a good option as it is easy to absorb and well suited the design of the website. 
+The typography will be taken from [Google Fonts](https://fonts.google.com/) and styled as ['Libre Franklin', sans-serif.](https://fonts.google.com/specimen/Libre+Franklin?query=Libre+Franklin) I felt this was a good option as it is easy to absorb and well suited the design of the website. 
 
 # Project Development 
-**Database**
 
-The database I used for this project was hosted through MongoDB Atlas. Below is an example of my collections:
+**MongoDB**
 
-*** Insert Table ***
+The database I used for this project was hosted through [MongoDB Atlas](https://www.mongodb.com/). Below is an example of my collection:
+![mongodb](docs/mongo-db.png)
+
 
 **Trello Board**
 
-During the development of building this website I had created a Trello Board which supported me in keeping to daily targets and prioritising more challenging tasks. Below is a screen grab of how the board looked at one point during the development. 
+During the development of building this website I had created a [Trello Board](https://trello.com/en) which supported me in keeping to daily targets and prioritising more challenging tasks. Below is a screen grab of how the board looked at one point during the development. 
 
-*** Insert Trello Board ***
+![mongodb](docs/trello-board.png)
 
 **Code Structure**
 
 As the project grew in scale, I decided to split the structure of the code to make it more manageable. Below is a demonstration of my file structure:
 
-*** Insert code structure ***
+![code](docs/code-structure.png)
 
 # Features 
 
@@ -120,9 +119,9 @@ As the project grew in scale, I decided to split the structure of the code to ma
  
 * Navigation Menu-
 
-The navigation menu provides links to the home page, upload recipes and search feature. There is a hover over this, so the user is aware of what they are selecting when browsing the options. The logo featured in the far-left corner takes the user back to the home page once clicked. 
+The navigation menu provides links to the [home](https://the-baking-book.herokuapp.com/index) page, [upload recipes](https://the-baking-book.herokuapp.com/add_recipes) and [search](https://the-baking-book.herokuapp.com/search) feature. There is a hover over this, so the user is aware of what they are selecting when browsing the options. The logo featured in the far-left corner takes the user back to the home page once clicked. 
 
-*** Image ***
+![navigation](docs/navigation-desktop.png)
 
 * Mobile Navigation Menu-
 
@@ -134,40 +133,49 @@ When viewing the website on a smaller mobile device, the navigation menu will sw
 
 Recipe cards display on the index page to provide a brief overview of the recipes. 
 
-*** Image ***
+![recipe-cards](docs/recipe-cards.png)
 
 * Footer- 
 
 The footer provides social links to Facebook, Pinterest and Instagram. These are all accessible on every page. 
 
-*** Image ***
+![footer](docs/footer.png)
 
 * Recipe View-
 
 Once clicked on a recipe card and selected 'view more', the user is presented with that recipe's full data on a separate page.
 
-*** Image ***
+![view-more](docs/view-more-recipe.png)
+
+* Delete Recipe-
+
+If a user decides to delete a recipe from the view more page, they can do so by clicking on the 'delete' button.
+
+![delete](docs/delete.png)
+
+* Update Recipe Button -
+ 
+ The update button will take the user to update the recipe.
+
+![update](docs/update.png)
 
 * Update Recipe-
 
 From the view more recipe page, the user has an option to update the recipe which takes them to a page ready for editing the current information. 
 
-*** Image ***
+![update](docs/update-form.png)
 
-* Delete Recipe-
 
-If a user decides to delete a recipe from the view more page, they will be asked to confirm the deletion before proceeding.
+* Upload Recipe-
 
-*** Image ***
-Upload Recipe-
 From the navigation menu a user can click to upload a recipe, they will be brought to the below image where they will be required to fill in the information.
 
-*** Image *** 
+![upload](docs/upload.png)
 
 Search-
-The search feature will provide the option to search for something specific or reset the search if required. If a search is successful it will pull up all relevant recipes in the form of cards. If the search is unsuccessful, a flash message will display "No Results Found".
+The search feature will provide the option to search for something specific or reset the search if required. If a search is successful it will pull up all relevant recipes in the form of cards. 
 
-*** Image ***
+![search](docs/search.png)
   
 **Features left to implement**
 
