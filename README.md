@@ -127,17 +127,17 @@ The navigation menu provides links to the [home](https://the-baking-book.herokua
 
 When viewing the website on a smaller mobile device, the navigation menu will switch to a mobile responsive nav, once selected it will provide the users with options to visit the home page, upload a recipe or search. 
 
-*** Image ***
+![mobile-nav](docs/mobile-nav.png)
 
 * Recipe Cards-
 
-Recipe cards display on the index page to provide a brief overview of the recipes. 
+Recipe cards display on the [index](https://the-baking-book.herokuapp.com/index) page to provide a brief overview of the recipes. 
 
 ![recipe-cards](docs/recipe-cards.png)
 
 * Footer- 
 
-The footer provides social links to Facebook, Pinterest and Instagram. These are all accessible on every page. 
+The footer provides social links to [Facebook](https://www.facebook.com/), [Pinterest](https://www.pinterest.co.uk/) and [Instagram](https://www.instagram.com/). These are all accessible on every page. 
 
 ![footer](docs/footer.png)
 
@@ -173,7 +173,7 @@ From the navigation menu a user can click to upload a recipe, they will be broug
 ![upload](docs/upload.png)
 
 Search-
-The search feature will provide the option to search for something specific or reset the search if required. If a search is successful it will pull up all relevant recipes in the form of cards. 
+The [search](https://the-baking-book.herokuapp.com/search) feature will provide the option to search for something specific or reset the search if required. If a search is successful it will pull up all relevant recipes in the form of cards. 
 
 ![search](docs/search.png)
   
@@ -184,72 +184,57 @@ Although I couldn't include all features from the original wireframes, there is 
 * An option to allow the users to star rate the recipes, concluding in a recipe general rating. 
 * As the website grows and the recipes continue to be uploaded, add pagination to the index page to allow for users to click through pages rather then scroll through a cluster of recipes.
 * A user chat- where account users can openly discuss and share thoughts about recipes they have or plan to make, for tips and tricks. 
+* A recipe delete confirmation button.
+* No search results message.
 
 # Technologies Used 
 Below is a list of technologies that contributed to the final product:
-* Flask 1.1.2 - Used as the main framework for my application
-* Python 3.8.3 - Used for backend data manipulation
-* Pymongo 3.10.1 - Used to communicate with the MongoDB database
-* Jinja2 2.11.2 - Used as the main templating language for template manipulation
-* HTML5 - Used as the main language for the templates
-* CSS3 - Used for styling the webpage
-* JavaScript - Used for some front-end functionality
-* Git - Used for version control
-* Materialize - Used as the main frontend framework
-* Google fonts - Used for website fonts
-* Font Awesome - Used for some icons on the website
-* Heroku - Used to host the website
-* GitHub - Used to store my project source code
-* MongoDB - Used as the main database technology
+* [Flask](https://en.wikipedia.org/wiki/Flask_(web_framework)) - Used as the main framework for my application
+* [Python](https://en.wikipedia.org/wiki/Python_(programming_language))  - Used for backend data manipulation
+* [Jinja2](https://en.wikipedia.org/wiki/Jinja_(template_engine))  - Used as the main templating language for template manipulation
+* [HTML5](https://en.wikipedia.org/wiki/HTML5) - Used as the main language for the templates
+* [CSS3](https://en.wikipedia.org/wiki/CSS) - Used for styling the webpage
+* [JavaScript](https://en.wikipedia.org/wiki/JavaScript) - Used for some front-end functionality
+* [Git](https://en.wikipedia.org/wiki/Git) - Used for version control
+* [Materialize](https://materializecss.com/about.html) - Used as the main frontend framework
+* [Google fonts](https://fonts.google.com/) - Used for website fonts
+* [Font Awesome](https://fontawesome.com/) - Used for some icons on the website
+* [Heroku](https://signup.heroku.com/?c=70130000000NeLCAA0&gclid=CjwKCAjw8-78BRA0EiwAFUw8LMUicsvP3MRHbgLTMYWypfJKww_Dn6LMCr6W5nd-vD2s3EZNkeKofRoCTMoQAvD_BwE) - Used to host the website
+* [GitHub](https://en.wikipedia.org/wiki/GitHub) - Used to store my project source code
+* [MongoDB](https://www.mongodb.com/) - Used as the main database technology
 
 **Other Tools:**
 
-* Adobe InDesign - Used to create the wireframes.
-* Adobe illustrator - Used to create the logo 
-* Grammarly - Used to double-check all my spelling and grammar.
-* W3C Markup - Used this to check my HTML for errors and typos.
-* W3C CSS - Used this to check the validity of my CSS.
-* jshint - Used to validate JavaScript.
+* [Adobe InDesign](https://www.adobe.com/uk/products/indesign.html) - Used to create the wireframes.
+* [Adobe illustrator](https://www.adobe.com/products/illustrator.html) - Used to create the logo 
+* [Grammarly](https://app.grammarly.com/?network=g&utm_source=google&matchtype=e&gclid=CjwKCAjw8-78BRA0EiwAFUw8LIwcbehXurVlxps-tDqCAu2YBHX5qwkcWslavRa1XJX3f9_zT3a-fRoC4xQQAvD_BwE&placement=&q=brand&utm_content=329885936576&gclsrc=aw.ds&utm_campaign=brand_f1&utm_medium=cpc&utm_term=grammarly) - Used to double-check all my spelling and grammar.
+* [W3C Markup](https://validator.w3.org/) - Used this to check my HTML for errors and typos.
+* [W3C CSS](https://jigsaw.w3.org/css-validator/) - Used this to check the validity of my CSS.
 
 # Testing
 
-**HTML Validation:**
-
-Html was validated via W3C Markup
-
-*** Image ***
-
-**CSS Validation:**
-
-CSS was validated via W3C CSS
-
-*** Image ***
-
-**JavaScript Validation:**
-
-JavaScript was validated via jshint
-
-*** Image ***
-
 **Browser and Device Testing-**
 
-*** Insert browser and device tables ***
+![browser-testing](docs/browser-testing.png)
+
+![device-testing](docs/device-testing-1.png)
 
 The following features were tested in the browser and device testing:
-* Navigation links 
-* Recipe cards reveal further information
-* View more link redirects to the correct page 
-* Information is neatly displayed 
-* Update recipe redirects to update form
-* Update recipe form allows information to be entered and saved 
-* Cancel update recipe restores the original information 
-* Delete recipe button provides a deletion confirmation upon request
-* Upload recipe- enter details correctly 
-* Upload recipe button- redirects user to home page where the new card is played  
-* Search feature provides correct results in recipe card format
-* Flash messages appear when called
-* Mobile navigation menu works as expected 
-* Footer social media links redirect to the correct URL in a separate browser window
+
+- [x] Navigation links 
+- [x] Recipe cards reveal further information
+- [x] View more link redirects to the correct page 
+- [x] Information is neatly displayed 
+- [x] Update recipe redirects to update form
+- [x] Update recipe form allows information to be entered and saved 
+- [x] Cancel update recipe restores the original information 
+- [x] Delete recipe button provides a deletion confirmation upon request
+- [x] Upload recipe- enter details correctly 
+- [x] Upload recipe button- redirects user to home page where the new card is played  
+- [x] Search feature provides correct results in recipe card format
+- [x] Flash messages appear when called
+- [x] Mobile navigation menu works as expected 
+- [x] Footer social media links redirect to the correct URL in a separate browser window
 
 **User Testing-**
 
@@ -277,16 +262,16 @@ User stories-
 
 **Documented Issues:**
 
-* Recipe cards- 
+* Recipe cards
 
 I had come across an issue quite late in my development. I tested my 'recipe upload' by entering 8 recipes that displayed as cards on the index page. These all worked fine and with the format in place I could begin to adjust on styling, media queries and breakpoints. However, my recipe cards started to disappear which left me checking my code for bugs. Nothing could be found wrong in the code, so I went to the next source and checked my MongoDB collections. The data had also been removed from my MongoDB. After researching why this may and checking in with tutor support, it was apparent that someone had been onto my website and hence deleted the recipes one by one. To avoid this happening again moving forward, I was advised to toggle off my dyno formation in Heroku until the project was ready to be submitted. 
 
-* Search Results-
+* Search Results
 
 I encountered some issues when initially putting in the search feature. After creating the @app.route and search form, I proceeded to copy in the Materialise card format from the index. However, there was an issue when trying to get onto the search page itself. Due to the fact at this point I hadn't created the if else statement, it was presenting a Jinja error. This was resolved after a few attempts and commits. The reason for these commits is because the page itself worked, due to the fact I was already on the search page and it was filtering results perfectly fine, it was only after leaving the search page that I had noticed the page could not be re-accessed. 
 
 # Deployment 
-The repository for this project is hosted through GitHub Pages and is deployed live through Heroku. 
+The repository for this project is hosted through [GitHub Pages](https://pages.github.com/) and is deployed live through [Heroku](https://signup.heroku.com/?c=70130000000NeLCAA0&gclid=CjwKCAjw8-78BRA0EiwAFUw8LDd1jQhifJcDNzVQbxeHH4bGiP88aGiFSXaahAjSa1jyD4DSCPFtiRoCr3sQAvD_BwE). 
 
 The deployment process of this project consisted of:
 
@@ -297,26 +282,25 @@ https://the-baking-book.herokuapp.com/index
 
 ## Content
 The content for dessert recipes were taken from various cooking websites such as:
-* BBC good food 
-* Simply Recipes
-* Prairie Farms 
+* [BBC good food](https://www.bbcgoodfood.com/) 
+* [Simply Recipes](https://www.simplyrecipes.com/)
 
 ## Media
 All dessert images were used from:
-* Pexels (https://www.pexels.com/) free stock images.
-* Pixabay.
+* [Pexels.](https://www.pexels.com/) 
+* [Pixabay.](https://pixabay.com/)
 
 **Icons**
 
 All icons were used from:
-* Font Awesome (https://fontawesome.com/) icon library.
-* Materialize Icons.
+* [Font Awesome](https://fontawesome.com/) icon library.
+* [Materialize](https://materializecss.com/icons.html) Icons.
 
 ## Acknowledgements
 
 The Baking Book was inspired by:
-* BBC Good Food.
+* [BBC good food](https://www.bbcgoodfood.com/) 
 
-Channels such as slack and stack overflow assisted in some technical challenges.
+Channels such as [slack](https://slack.com/intl/en-gb/) and [Stack Overflow](https://stackoverflow.com/) assisted in some technical challenges.
 
 I would like to thank my Mentor Aaron Sinnott for his advice and guidance throughout the development of this project. 
