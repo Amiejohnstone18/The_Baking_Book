@@ -132,16 +132,18 @@
         >
         <br />
         <br />
-        <textarea
+        {% for ingredient in recipe.ingredients %}
+        <input
           id="ingredients"
           name="ingredients"
-          minlength="10"
+          minlength="5"
           maxlength="500"
           type="text"
           class="validate"
-          placeholder="Enter each ingredient on a new line"
+          value="{{ingredient}}"
           required
-        ></textarea>
+        >
+         {% endfor %}
       </div>
       <!-- Method -->
       <div class="input-field col s12">
@@ -150,16 +152,18 @@
         >
         <br />
         <br />
-        <textarea
+        {% for method in recipe.method %}
+        <input
           id="method"
           name="method"
-          type="text"
-          minlength="10"
+          minlength="5"
           maxlength="500"
+          type="text"
           class="validate"
-          placeholder="Enter each method on a new line"
+          value="{{method}}"
           required
-        ></textarea>
+        >
+         {% endfor %}
       </div>
       <!-- Submit -->
       <button class="button-left" type="submit">

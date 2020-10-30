@@ -47,14 +47,6 @@ def add_recipes():
 @app.route("/search", methods=["GET", "POST"])
 def search():
     if request.method == "POST":
-        submit = {
-            "recipe_name": request.form.get("recipe_name"),
-            "image_url": request.form.get("image_url"),
-            "description": request.form.get("description"),
-            "preptime": request.form.get("preptime"),
-            "bakingtime": request.form.get("bakingtime"),
-            "serves": request.form.get("serves"),
-        }
         query = request.form.get("query")
         add_recipes = mongo.db.add_recipes.find({"$text": {"$search": query}})
         return render_template("search.html", add_recipes=add_recipes)
@@ -72,6 +64,15 @@ def view_more(recipe_id):
 @app.route("/update_recipe/<recipe_id>", methods=["GET", "POST"])
 def update_recipe(recipe_id):
     if request.method == "POST":
+        ingredientsArray = []
+        methodArray = []
+        for key in request.form:
+            if key == "ingredients":
+                value = request.form[key]
+                ingredientsArray.append(value)
+            if key == "method":
+                value = request.form[key]
+                methodArray.append(value)
         submit = {
             "author": request.form.get("author"),
             "recipe_name": request.form.get("recipe_name"),
@@ -80,12 +81,12 @@ def update_recipe(recipe_id):
             "preptime": request.form.get("preptime"),
             "bakingtime": request.form.get("bakingtime"),
             "serves": request.form.get("serves"),
-            "ingredients": request.form.get("ingredients").split('\r\n'),
-            "method": request.form.get("method").split('\r\n')
+            "ingredients": ingredientsArray,
+            "method": methodArray
         }
-
         mongo.db.add_recipes.update({"_id": ObjectId(recipe_id)}, submit)
         flash("Recipe Updated")
+        return redirect(url_for('index'))
 
     recipe = mongo.db.add_recipes.find_one({"_id": ObjectId(recipe_id)})
     return render_template("update_recipe.html", recipe=recipe)
