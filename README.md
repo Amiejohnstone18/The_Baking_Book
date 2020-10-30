@@ -8,25 +8,13 @@ Recipes are presented in the form of cards which display on the home page. From 
 
 # Table of contents
 * [UX Design](#UX-Design)
-  * [Strategy](**Strategy**) 
-  * [Scope](**Scope**) 
-  * [Structure](**Structure**) 
-  * [Skeleton](**Skeleton]**) 
-  * [Surface](Surface])
-  * [Project Development](#Project-Development )
-* [Features](#Features )
-  * [Existing Features](**Existing-Features**) 
-  * [Features left to implement](**Features-left-to-implement**)
+* [Project Development](#Project-Development)
+* [Features](#Features)
 * [Technologies Used](#Technologies-Used)
 * [Testing](#Testing) 
-  * [Browser and Device Testing](**Browser-and-Device-Testing-**)
-  * [User Testing](**User-Testing-**)
-  * [Documented Issues](**Documented-Issues:**)
-* [Deployment](#Deployment )
-* [Credits](#Credits )
-  * [Content](##Content)
-  * [Media](##Media)
-  * [Acknowledgements](##Acknowledgements) 
+* [Deployment](#Deployment)
+* [Credits](#Credits)
+ 
 
 # UX Design
 
