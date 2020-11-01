@@ -3,7 +3,7 @@
 
 [The Baking Book](https://the-baking-book.herokuapp.com/index) is a user friendly, home made dessert recipe website. Users can manipulate the platform and data to view, upload, modify and delete recipes of their choice. The website is straight forward and easy for the user to navigate around. 
 
-Recipes are presented in the form of cards which display on the home page. From here, a user can gain quick access to brief information via clicking on the three dots provided. There is also an option to [view more](https://the-baking-book.herokuapp.com/view_more/5f9b12db20f341c17f6f6882), which will take the user to a full description of the recipe, including recipe name, image, prep time, baking time, how many people it serves, ingredients and the method.
+Recipes are presented in the form of cards which display on the home page. From here, a user can gain quick access to brief information via clicking on the three dots provided. There is also an option to [view more](https://the-baking-book.herokuapp.com/view_more/5f9b12db20f341c17f6f6882), which will take the user to a full description of the recipe, including recipe name, image, preparation time, baking time, how many people it serves, ingredients and the method.
 
 
 # Table of contents
@@ -28,7 +28,7 @@ User stories
 
 1. User 1:
 
-*I would like to access a recipes ingredient information so I know what I would need to buy before making.*
+*I would like to access a recipes ingredient information so I know what I would need to buy before baking.*
 
 2. User 2:
 
@@ -42,19 +42,19 @@ User stories
 **Scope**
 
 Due to my strategic goals, it is important to give users control to create, read, update and delete recipe data on the website. Therefore, it is essential that users can easily access this information and can manipulate the data accordingly. The requirements for this application are:
-* Provide a selection of recipe cards which will include recipe images, recipe name, icons for prep time, baking time and the amount it serves, along with a brief description.
+* Provide a selection of recipe cards which will include recipe images, recipe name, icons for preparation time, baking time and the amount of people it serves, along with a brief description.
 * Links to full description pages from the cards will then provide the option to read, update and delete that specific recipe. 
 * A separate page will be presented for users to upload their own recipes which will require a combination of text and image URLs.
-* A search feature displayed in the Nav menu will permit users to filter through the website searching for specific recipes or ingredients. 
+* A search feature displayed in the navigation menu will permit users to filter through the website searching for specific recipes or ingredients. 
 * Links to social media platforms [Facebook](https://www.facebook.com/), [Pinterest](https://www.pinterest.co.uk/) and [Instagram](https://www.instagram.com/) will be displayed in the footer.
 * A mobile navigation menu will aim to maintain the applications responsiveness on smaller viewports. 
 
 
 **Structure** 
 
-Given the functional requirements of this application, the interaction design of this website means that users can effectively accomplish their goals for engaging with the website. However, to ensure the interaction design is well thought out and works in practice, through using [Flask](https://en.wikipedia.org/wiki/Flask_(web_framework)) flash messages, users will be informed of changes they've made to recipes. Once a user has interacted with the website for example, uploaded a recipe or deleted one, they will then be redirected to an appropriate page to carry on with their journey through the website. 
+Given the functional requirements of this application, the interaction design of this website means that users can effectively accomplish their goals for engaging with the website. However, to ensure the interaction design is well thought out and works in practice, through using [Flask](https://en.wikipedia.org/wiki/Flask_(web_framework)) Flash messages, users will be informed of changes they've made to recipes. Once a user has interacted with the website for example, uploaded a recipe or deleted one, they will then be redirected to an appropriate page to carry on with their journey through the website. 
 
-It is imperative that the information architecture is appropriately displayed across the website. To avoid the issue of presenting too much content on a page and deterring the user from continuing, keeping the information relative and prioritising sections based on user interactions and needs will be most effective. For this reason, a user will only be able to gain access to a full recipes description once clicking on the view more option from the [index](https://the-baking-book.herokuapp.com/index) recipe cards. From there, they can read, update and delete selected recipe. This will avoid presenting users with a list of full recipe descriptions which could prove to be an overload of information. The navigation menu will consist of the [home](https://the-baking-book.herokuapp.com/index) page, [upload a recipe](https://the-baking-book.herokuapp.com/add_recipes) and the [search](https://the-baking-book.herokuapp.com/search) feature. Ensuring to keep the movement around the application simple for the user, the aim is to ensure users don't get lost on their journey.   
+It is imperative that the information architecture is appropriately displayed across the website. To avoid the issue of presenting too much content on a page and deterring the user from continuing, keeping the information relative and prioritising sections based on user interactions and needs will be most effective. For this reason, a user will only be able to gain access to a full recipes description once clicking on the view more option from the [index](https://the-baking-book.herokuapp.com/index) recipe cards. From there, they can read, update and delete selected recipe. This will avoid presenting users with a list of full recipe descriptions which could prove to be an overload of information. The navigation menu will consist of the [home](https://the-baking-book.herokuapp.com/index) page, [upload a recipe](https://the-baking-book.herokuapp.com/add_recipes) and the [search](https://the-baking-book.herokuapp.com/search) feature. Ensuring to keep the movement around the application simple for the user.   
 
 
 **Skeleton**
@@ -63,7 +63,7 @@ Initially, I had designed the website to include further features such as a user
 
 ![wireframae-1](docs/original-wireframes.png)
 
-After the discussion with Aaron, I had modified the wireframes to ensure the remaining interaction design, information architecture, navigation and features could remain to be displayed appropriately to allow the user to continue to interact with the functionality of the website effectively. This also meant rethinking the interface design of re-direct page links and the navigation design. 
+After the discussion with Aaron, I had modified the wireframes to ensure the remaining interaction design, information architecture, navigation and features could contine to be displayed appropriately to allow the user to interact with the functionality of the website effectively. This also meant rethinking the interface design of re-direct page links and the navigation design. 
 
 
 *** Insert new wireframes ***
@@ -213,10 +213,10 @@ The following features were tested in the browser and device testing:
 - [x] View more link redirects to the correct page 
 - [x] Information is neatly displayed 
 - [x] Update recipe redirects to update form
-- [x] Update recipe form allows information to be entered and saved 
+- [x] Update recipe form allows information to be modified and saved 
 - [x] Cancel update recipe restores the original information 
-- [x] Delete recipe button provides a deletion confirmation upon request
-- [x] Upload recipe- enter details correctly 
+- [x] Delete recipe button erases recipe from the website
+- [x] Upload recipe- specified characters required 
 - [x] Upload recipe button- redirects user to home page where the new card is played  
 - [x] Search feature provides correct results in recipe card format
 - [x] Flash messages appear when called
@@ -251,7 +251,7 @@ User stories-
 
 * Recipe cards
 
-I had come across an issue quite late in my development. I tested my 'recipe upload' by entering 8 recipes that displayed as cards on the index page. These all worked fine and with the format in place I could begin to adjust on styling, media queries and breakpoints. However, my recipe cards started to disappear which left me checking my code for bugs. Nothing could be found wrong in the code, so I went to the next source and checked my MongoDB collections. The data had also been removed from my MongoDB. After researching why this may and checking in with tutor support, it was apparent that someone had been onto my website and hence deleted the recipes one by one. To avoid this happening again moving forward, I was advised to toggle off my dyno formation in Heroku until the project was ready to be submitted. 
+I had come across an issue quite late in my development. I tested my 'recipe upload' by entering 8 recipes that displayed as cards on the index page. These all worked fine and with the format in place I could begin styling. However, my recipe cards started to disappear which left me checking my code for bugs. Nothing could be found wrong in the code, so I went to the next source and checked my MongoDB collections. The data had also been removed from my MongoDB. After researching why this may be and checking in with tutor support, it was apparent that someone had been onto my website and hence deleted the recipes one by one. To avoid this happening again moving forward, I was advised to toggle off my dyno formation in Heroku until the project was ready to be submitted. Although, Inwas warned by my Tutors to expect this to happen again. If this is the case post submission, the website is still functional by uploading recipes. From there, they can be read updated and deleted by the user. 
 
 * Search Results
 
