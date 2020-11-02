@@ -65,8 +65,7 @@ Initially, I had designed the website to include further features such as a user
 
 After the discussion with Aaron, I had modified the wireframes to ensure the remaining interaction design, information architecture, navigation and features could contine to be displayed appropriately to allow the user to interact with the functionality of the website effectively. This also meant rethinking the interface design of re-direct page links and the navigation design. 
 
-
-*** Insert new wireframes ***
+![wireframae-2](docs/wireframes-final.png)
 
 
 All wireframes were created using [Adobe InDesign](https://www.adobe.com/uk/products/indesign.html) and can all be accessed from the wireframes document [here](docs/wireframes). 
@@ -262,7 +261,7 @@ The repository for this project is hosted through [GitHub Pages](https://pages.g
 
 The deployment process of this project consisted of:
 
-Before I created my Heroku application, I had to tell Heroku which applications and dependencies were required to run the app. I typed `pip3 freeze –local > requirements.txt` into my GitPub terminal to create the requirements.txt file. The Procfile is what Heroku looks for to know which file runs the app and how to run it. I achieved this by typing `echo web: python app.py > Procfile` into the terminal to create the Procfile. I checked they were both created successfully in the fire directory and ensured all decencies that are required for flask are listed in the requirements.txt file.
+Before I created my Heroku application, I had to tell Heroku which applications and dependencies were required to run the app. I typed `pip3 freeze –local > requirements.txt` into my GitHub terminal to create the requirements.txt file. The Procfile is what Heroku looks for to know which file runs the app and how to run it. I achieved this by typing `echo web: python app.py > Procfile` into the terminal to create the Procfile. I checked they were both created successfully in the fire directory and ensured all decencies that are required for flask are listed in the requirements.txt file.
 
 In Heroku, once logged on I clicked create a new app. I typed in my app name and selected the region closest to me. Selected Create app. In order to connect the app, I set up automatic deployment from my GitHub repository. I made sure this was displayed then added my repository name, clicked search, once it found the right repository, I clicked to connect to this app. 
 
