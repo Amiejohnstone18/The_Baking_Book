@@ -69,7 +69,7 @@ After the discussion with Aaron, I had modified the wireframes to ensure the rem
 *** Insert new wireframes ***
 
 
-All wireframes were created using [Adobe InDesign](https://www.adobe.com/uk/products/indesign.html) and can all be accessed from the wireframes document here. 
+All wireframes were created using [Adobe InDesign](https://www.adobe.com/uk/products/indesign.html) and can all be accessed from the wireframes document [here](docs/wireframes). 
 
 
 **Surface** 
@@ -251,7 +251,7 @@ User stories-
 
 * Recipe cards
 
-I had come across an issue quite late in my development. I tested my 'recipe upload' by entering 8 recipes that displayed as cards on the index page. These all worked fine and with the format in place I could begin styling. However, my recipe cards started to disappear which left me checking my code for bugs. Nothing could be found wrong in the code, so I went to the next source and checked my MongoDB collections. The data had also been removed from my MongoDB. After researching why this may be and checking in with tutor support, it was apparent that someone had been onto my website and hence deleted the recipes one by one. To avoid this happening again moving forward, I was advised to toggle off my dyno formation in Heroku until the project was ready to be submitted. Although, Inwas warned by my Tutors to expect this to happen again. If this is the case post submission, the website is still functional by uploading recipes. From there, they can be read updated and deleted by the user. 
+I had come across an issue quite late in my development. I tested my 'recipe upload' by entering 8 recipes that displayed as cards on the index page. These all worked fine and with the format in place I could begin styling. However, my recipe cards started to disappear which left me checking my code for bugs. Nothing could be found wrong in the code, so I went to the next source and checked my MongoDB collections. The data had also been removed from my MongoDB. After researching why this may be and checking in with tutor support, it was apparent that someone had been onto my website and hence deleted the recipes one by one. To avoid this happening again moving forward, I was advised to toggle off my dyno formation in Heroku until the project was ready to be submitted. Although, I was warned by my Tutors to expect this to happen again. If this is the case post submission, the website is still functional by uploading recipes. From there, they can be read updated and deleted by the user. 
 
 * Search Results
 
@@ -261,6 +261,13 @@ I encountered some issues when initially putting in the search feature. After cr
 The repository for this project is hosted through [GitHub Pages](https://pages.github.com/) and is deployed live through [Heroku](https://signup.heroku.com/?c=70130000000NeLCAA0&gclid=CjwKCAjw8-78BRA0EiwAFUw8LDd1jQhifJcDNzVQbxeHH4bGiP88aGiFSXaahAjSa1jyD4DSCPFtiRoCr3sQAvD_BwE). 
 
 The deployment process of this project consisted of:
+
+Before I created my Heroku application, I had to tell Heroku which applications and dependencies were required to run the app. I typed `pip3 freeze –local > requirements.txt` into my GitPub terminal to create the requirements.txt file. The Procfile is what Heroku looks for to know which file runs the app and how to run it. I achieved this by typing `echo web: python app.py > Procfile` into the terminal to create the Procfile. I checked they were both created successfully in the fire directory and ensured all decencies that are required for flask are listed in the requirements.txt file.
+
+In Heroku, once logged on I clicked create a new app. I typed in my app name and selected the region closest to me. Selected Create app. In order to connect the app, I set up automatic deployment from my GitHub repository. I made sure this was displayed then added my repository name, clicked search, once it found the right repository, I clicked to connect to this app. 
+
+Before I was able to enable automatic deployment, since I had contained my environment variables within the hidden app.py file, Heroku won’t be able to read those variables. I clicked on the settings tab for the app and then clicked on reveal config Vars. I made sure not to include any quotes for the key or value. The first variable is IP with the value of 0.0.0.0. Next the port which is 5000. For the secret key, I copied that from the env.py file and pasted it into Heroku. The MongoDB name is the name of my database. I went back to the deploy tab, but before I could push it, I needed to push my two new files to the repository. Once done, I could now safely proceed with automatic deployment on Heroku. I clicked deploy branch.  It showed a message informing me my app was successfully deployed, I clicked view to launch my new app.
+
 
 Should you wish to access the URL to the website, that can be found via: 
 https://the-baking-book.herokuapp.com/index
